@@ -146,18 +146,27 @@ INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/
 INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/csfonts/csbx9.tfm
 INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/csfonts/csr12.tfm
 INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/csfonts/csbx12.tfm
+INPUT ./diagram.pdf
+INPUT ./diagram.pdf
+INPUT ./diagram.pdf
+INPUT ./diagram.pdf
+INPUT ./diagram.pdf
+INPUT ./diagram.pdf
 INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/csfonts/cssl10.tfm
 INPUT clanok.aux
 INPUT ./clanok.out
 INPUT ./clanok.out
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi720/csbx12.pk
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi720/csbx12.pk
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/cssl10.pk
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/cssl10.pk
 INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csr10.pk
 INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csr10.pk
 INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csr8.pk
 INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csr8.pk
 INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm0600.pk
 INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm0600.pk
-INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi720/csbx12.pk
-INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi720/csbx12.pk
 INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csbx9.pk
 INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csbx9.pk
 INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/cstt9.pk

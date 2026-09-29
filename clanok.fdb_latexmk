@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1790687696.71089 "/Users/matvii/Documents/Study_Materials/MIP/3/mip-clanok/clanok.tex" "clanok.pdf" "clanok" 1790687697.16382 0
-  "/Users/matvii/Documents/Study_Materials/MIP/3/mip-clanok/clanok.tex" 1790687696.56598 1736 17ba0eb0f843e567caf0c915b0317ce8 ""
-  "/Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map" 1790684721.43154 24443 e20fd78f15025eb99f58a4172cdb49fa ""
+["pdflatex"] 1790688725.15107 "/Users/matvii/Documents/Study_Materials/MIP/3/mip-clanok/clanok.tex" "clanok.pdf" "clanok" 1790688725.57465 0
+  "/Users/matvii/Documents/Study_Materials/MIP/3/mip-clanok/clanok.tex" 1790688724.18105 1778 cc04820ffdf31dc07978da30c7f5dae0 ""
+  "/Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map" 1790688705.24742 24443 e20fd78f15025eb99f58a4172cdb49fa ""
   "/Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm0600.pk" 1790081033.55356 7284 e91ffd91507bfe19f92cfa7d35aeb21f ""
   "/Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1790081041.56097 14064 4a51e52a5112612b0cfb1eeaa5d0c6f9 ""
   "/Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csbx9.pk" 1790081037.98385 15420 b18ade5053c2a5fa91449b21ce6407aa ""
@@ -10,6 +10,7 @@
   "/Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csr17.pk" 1790081042.36095 29584 a56b05167d503745c9f4a66c70c87385 ""
   "/Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csr8.pk" 1790081032.85415 13340 7657e563a3d62c9cb2259a59647995e8 ""
   "/Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csr9.pk" 1790081039.83004 14856 2fe4a73531f2da177c16f9fda6c87240 ""
+  "/Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/cssl10.pk" 1790081030.94902 20212 341e46accc52baa642bf3845297ce557 ""
   "/Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/cstt9.pk" 1790081038.93858 11584 354ea5b6e9103aa2232785d9de243305 ""
   "/Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi720/csbx12.pk" 1790081037.23223 27708 06bf3e1b73c2e3f3fe32c6e6d388053a ""
   "/Users/matvii/Library/Application Support/MiKTeX/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt" 1790080988.21198 10174552 ba740972f15c061fda173a9f99d910f1 ""
@@ -33,6 +34,7 @@
   "/Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/csfonts/csr6.tfm" 1790080994.11751 2376 e2bc4a8dd4f19af1bc6247891a146858 ""
   "/Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/csfonts/csr8.tfm" 1790080994.11771 2368 f4f9f06a2b86f71b5f351721c3e60919 ""
   "/Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/csfonts/csr9.tfm" 1790080994.11781 2376 de3119feecfe0dae00b14f6e9033497b ""
+  "/Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/csfonts/cssl10.tfm" 1790080994.11791 2604 017cb3ae2597ec48c1aa5eb8f746f130 ""
   "/Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/csfonts/cstt9.tfm" 1790080994.12252 1276 c0504c18a6a7a61858690795c8c0b15a ""
   "/Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/context/base/mkii/supp-pdf.mkii" 1790081018.22358 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/cslatex/base/il2cmr.fd" 1790080993.00609 2233 ed1615a25411b6b9d990c84a33d9881b ""
@@ -82,9 +84,10 @@
   "/Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/refcount/refcount.sty" 1790081007.03896 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
   "/Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1790081015.40198 9684 a33a14b82ce60d6e77cb9be689d79ee6 ""
   "/Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/url/url.sty" 1790080997.38549 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "clanok.aux" 1790687697.07777 1439 915c83c436f85bb2a394130ad0528d8c "pdflatex"
-  "clanok.out" 1790687697.07843 707 5fda85f48f3b43a213f11eac8476f74f "pdflatex"
-  "clanok.tex" 1790687696.56598 1736 17ba0eb0f843e567caf0c915b0317ce8 ""
+  "clanok.aux" 1790688725.49634 1439 4836f296a920b3fbf987c71ba2192a1e "pdflatex"
+  "clanok.out" 1790688725.49693 707 5fda85f48f3b43a213f11eac8476f74f "pdflatex"
+  "clanok.tex" 1790688724.18105 1778 cc04820ffdf31dc07978da30c7f5dae0 ""
+  "diagram.pdf" 1790688619.94616 10209 d517fd398f0082c54aa440df48ee0e4c ""
   (generated)
   "clanok.aux"
   "clanok.log"

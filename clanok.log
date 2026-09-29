@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2026.9.22)  29 SEP 2026 15:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2026.9.22)  29 SEP 2026 15:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -273,11 +273,28 @@ Overfull \hbox (11.41048pt too wide) in paragraph at lines 34--35
 \IL2/cmr/m/n/9 jazykov^^fdch (textov^^fdch) a behavior^^e1lnych (na spr^^e1van^^ed recenzenta zalo^^been^^fdch)
  []
 
+<diagram.pdf, id=27, 271.0125pt x 552.0625pt>
+File: diagram.pdf Graphic file (type pdf)
+<use diagram.pdf>
+Package pdftex.def Info: diagram.pdf  used on input line 42.
+(pdftex.def)             Requested size: 271.01183pt x 552.06114pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 
 [1
 
-{/Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map}] (clanok.aux)
+{/Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map}]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package babel Info: 'slovak' activates 'slovak' shorthands.
+(babel)             Reported on input line 57.
+[2 <./diagram.pdf>]
+
+[3] (clanok.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-08-10>
@@ -286,17 +303,17 @@ Package rerunfilecheck Info: File `clanok.out' has not changed.
 (rerunfilecheck)             Checksum: 5FDA85F48F3B43A213F11EAC8476F74F;707.
  ) 
 Here is how much of TeX's memory you used:
- 10385 strings out of 469380
- 171132 string characters out of 5457167
- 589338 words of memory out of 5000000
- 39332 multiletter control sequences out of 15000+600000
- 637478 words of font info for 64 fonts, out of 8000000 for 9000
+ 10398 strings out of 469380
+ 171350 string characters out of 5457167
+ 587338 words of memory out of 5000000
+ 39342 multiletter control sequences out of 15000+600000
+ 638105 words of font info for 65 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
- 74i,6n,79p,495b,504s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csr10.pk> </Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csr8.pk> </Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm0600.pk> </Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi720/csbx12.pk> </Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csbx9.pk> </Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/cstt9.pk> </Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csr9.pk> </Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csr12.pk> </Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk> </Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csr17.pk>
-Output written on clanok.pdf (1 page, 73622 bytes).
+ 74i,6n,79p,495b,506s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi720/csbx12.pk> </Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/cssl10.pk> </Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csr10.pk> </Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csr8.pk> </Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm0600.pk> </Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csbx9.pk> </Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/cstt9.pk> </Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csr9.pk> </Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csr12.pk> </Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk> </Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csr17.pk>
+Output written on clanok.pdf (3 pages, 87940 bytes).
 PDF statistics:
- 267 PDF objects out of 1000 (max. 8388607)
- 8 named destinations out of 1000 (max. 500000)
- 49 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 299 PDF objects out of 1000 (max. 8388607)
+ 10 named destinations out of 1000 (max. 500000)
+ 54 words of extra memory for PDF output out of 10000 (max. 10000000)
 
