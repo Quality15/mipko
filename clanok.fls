@@ -1,0 +1,172 @@
+PWD /Users/matvii/Documents/Study_Materials/MIP/3/mip-clanok
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt
+INPUT /Users/matvii/Documents/Study_Materials/MIP/3/mip-clanok/clanok.tex
+OUTPUT clanok.log
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/article.cls
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/article.cls
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/size10.clo
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/size10.clo
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/size10.clo
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/generic/babel/babel.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/generic/babel/babel.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/generic/babel/txtbabel.def
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/arabi/bblopts.cfg
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/arabi/bblopts.cfg
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/arabi/bblopts.cfg
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/generic/babel/locale/sk/babel-slovak.tex
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/generic/babel/locale/sk/babel-slovak.tex
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/generic/babel/locale/sk/babel-slovak.tex
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/generic/babel/locale/sk/babel-sk.ini
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/babel-slovak/slovak.ldf
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/babel-slovak/slovak.ldf
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/babel-slovak/slovak.ldf
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/fontenc.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/fontenc.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/cslatex/base/il2enc.def
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/cslatex/base/il2enc.def
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/cslatex/base/il2enc.def
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/cslatex/base/il2cmr.fd
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/cslatex/base/il2cmr.fd
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/cslatex/base/il2cmr.fd
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/csfonts/csr10.tfm
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/inputenc.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/inputenc.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/graphicx.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/graphicx.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/keyval.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/keyval.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/graphics.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/graphics.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/trig.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/trig.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics-cfg/graphics.cfg
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics-cfg/graphics.cfg
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics-cfg/graphics.cfg
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics-def/pdftex.def
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics-def/pdftex.def
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics-def/pdftex.def
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/url/url.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/url/url.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/hyperref/hyperref.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/hyperref/hyperref.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/generic/iftex/iftex.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/generic/iftex/iftex.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/kvsetkeys/kvsetkeys.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/kvsetkeys/kvsetkeys.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/generic/kvdefinekeys/kvdefinekeys.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/generic/kvdefinekeys/kvdefinekeys.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pdfescape/pdfescape.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pdfescape/pdfescape.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/generic/ltxcmds/ltxcmds.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/generic/ltxcmds/ltxcmds.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pdftexcmds/pdftexcmds.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pdftexcmds/pdftexcmds.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/generic/infwarerr/infwarerr.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/generic/infwarerr/infwarerr.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/hycolor/hycolor.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/hycolor/hycolor.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/hyperref/nameref.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/hyperref/nameref.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/refcount/refcount.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/refcount/refcount.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/generic/gettitlestring/gettitlestring.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/generic/gettitlestring/gettitlestring.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/kvoptions/kvoptions.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/kvoptions/kvoptions.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/etoolbox/etoolbox.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/etoolbox/etoolbox.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/generic/stringenc/stringenc.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/generic/stringenc/stringenc.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/hyperref/pd1enc.def
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/hyperref/pd1enc.def
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/hyperref/pd1enc.def
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/generic/intcalc/intcalc.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/generic/intcalc/intcalc.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/hyperref/puenc.def
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/hyperref/puenc.def
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/hyperref/puenc.def
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/generic/bitset/bitset.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/generic/bitset/bitset.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/generic/bigintcalc/bigintcalc.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/generic/bigintcalc/bigintcalc.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/hyperref/hpdftex.def
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/hyperref/hpdftex.def
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/hyperref/hpdftex.def
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/rerunfilecheck/rerunfilecheck.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/rerunfilecheck/rerunfilecheck.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/generic/uniquecounter/uniquecounter.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/generic/uniquecounter/uniquecounter.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/cite/cite.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/cite/cite.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/l3kernel/l3backend-pdftex.def
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/l3kernel/l3backend-pdftex.def
+INPUT ./clanok.aux
+INPUT ./clanok.aux
+INPUT clanok.aux
+OUTPUT clanok.aux
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/00miktex/epstopdf-sys.cfg
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/00miktex/epstopdf-sys.cfg
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/00miktex/epstopdf-sys.cfg
+INPUT ./clanok.out
+INPUT ./clanok.out
+INPUT clanok.out
+INPUT clanok.out
+OUTPUT clanok.pdf
+INPUT ./clanok.out
+INPUT ./clanok.out
+OUTPUT clanok.out
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/csfonts/csr17.tfm
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmr17.tfm
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmr12.tfm
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmmi12.tfm
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmmi12.tfm
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/csfonts/csr12.tfm
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/jknappen/ec/tcrm1200.tfm
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/csfonts/csr9.tfm
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/cslatex/base/il2cmtt.fd
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/cslatex/base/il2cmtt.fd
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/cslatex/base/il2cmtt.fd
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/csfonts/cstt9.tfm
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/csfonts/csr8.tfm
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmr8.tfm
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmr6.tfm
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmmi8.tfm
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmmi6.tfm
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmsy8.tfm
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmsy6.tfm
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/csfonts/csr6.tfm
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/jknappen/ec/tcrm0600.tfm
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/csfonts/csbx9.tfm
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/csfonts/csr12.tfm
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/csfonts/csbx12.tfm
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map
+INPUT clanok.aux
+INPUT ./clanok.out
+INPUT ./clanok.out
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csr10.pk
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csr10.pk
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csr8.pk
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csr8.pk
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm0600.pk
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm0600.pk
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi720/csbx12.pk
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi720/csbx12.pk
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csbx9.pk
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csbx9.pk
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/cstt9.pk
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/cstt9.pk
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csr9.pk
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csr9.pk
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csr12.pk
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csr12.pk
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csr17.pk
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csr17.pk
