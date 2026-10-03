@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2026.9.22)  29 SEP 2026 15:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2026.9.22)  3 OCT 2026 13:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -262,6 +262,10 @@ LaTeX Font Info:    Trying to load font information for IL2+cmtt on input line 3
  (/Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/cslatex/base/il2cmtt.fd
 File: il2cmtt.fd 1997/08/20 CSLaTeX font definitions
 )
+Overfull \hbox (71.88472pt too wide) in paragraph at lines 32--32
+ [][] 
+ []
+
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 32.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -305,15 +309,15 @@ Package rerunfilecheck Info: File `clanok.out' has not changed.
 Here is how much of TeX's memory you used:
  10398 strings out of 469380
  171350 string characters out of 5457167
- 587338 words of memory out of 5000000
+ 587383 words of memory out of 5000000
  39342 multiletter control sequences out of 15000+600000
  638105 words of font info for 65 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
  74i,6n,79p,495b,506s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi720/csbx12.pk> </Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/cssl10.pk> </Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csr10.pk> </Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csr8.pk> </Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm0600.pk> </Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csbx9.pk> </Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/cstt9.pk> </Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csr9.pk> </Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csr12.pk> </Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk> </Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/csfonts/dpi600/csr17.pk>
-Output written on clanok.pdf (3 pages, 87940 bytes).
+Output written on clanok.pdf (3 pages, 90086 bytes).
 PDF statistics:
- 299 PDF objects out of 1000 (max. 8388607)
+ 306 PDF objects out of 1000 (max. 8388607)
  10 named destinations out of 1000 (max. 500000)
  54 words of extra memory for PDF output out of 10000 (max. 10000000)
 

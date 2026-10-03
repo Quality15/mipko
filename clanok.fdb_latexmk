@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1790688725.15107 "/Users/matvii/Documents/Study_Materials/MIP/3/mip-clanok/clanok.tex" "clanok.pdf" "clanok" 1790688725.57465 0
-  "/Users/matvii/Documents/Study_Materials/MIP/3/mip-clanok/clanok.tex" 1790688724.18105 1778 cc04820ffdf31dc07978da30c7f5dae0 ""
+["pdflatex"] 1791026323.87379 "/Users/matvii/Documents/Study_Materials/MIP/3/mip-clanok/clanok.tex" "clanok.pdf" "clanok" 1791026324.33641 0
+  "/Users/matvii/Documents/Study_Materials/MIP/3/mip-clanok/clanok.tex" 1791026323.39237 1823 c7d20858b6f1d307b76a2f8dec68dadf ""
   "/Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map" 1790688705.24742 24443 e20fd78f15025eb99f58a4172cdb49fa ""
   "/Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm0600.pk" 1790081033.55356 7284 e91ffd91507bfe19f92cfa7d35aeb21f ""
   "/Users/matvii/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1790081041.56097 14064 4a51e52a5112612b0cfb1eeaa5d0c6f9 ""
@@ -84,9 +84,9 @@
   "/Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/refcount/refcount.sty" 1790081007.03896 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
   "/Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1790081015.40198 9684 a33a14b82ce60d6e77cb9be689d79ee6 ""
   "/Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/url/url.sty" 1790080997.38549 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "clanok.aux" 1790688725.49634 1439 4836f296a920b3fbf987c71ba2192a1e "pdflatex"
-  "clanok.out" 1790688725.49693 707 5fda85f48f3b43a213f11eac8476f74f "pdflatex"
-  "clanok.tex" 1790688724.18105 1778 cc04820ffdf31dc07978da30c7f5dae0 ""
+  "clanok.aux" 1791026324.25955 1439 4836f296a920b3fbf987c71ba2192a1e "pdflatex"
+  "clanok.out" 1791026324.26008 707 5fda85f48f3b43a213f11eac8476f74f "pdflatex"
+  "clanok.tex" 1791026323.39237 1823 c7d20858b6f1d307b76a2f8dec68dadf ""
   "diagram.pdf" 1790688619.94616 10209 d517fd398f0082c54aa440df48ee0e4c ""
   (generated)
   "clanok.aux"
