@@ -45,6 +45,18 @@ INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
 INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics-def/pdftex.def
 INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics-def/pdftex.def
 INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics-def/pdftex.def
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsmath/amsmath.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsmath/amsmath.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsmath/amsopn.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsmath/amstext.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsmath/amstext.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsmath/amsgen.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsmath/amsgen.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsmath/amsbsy.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsmath/amsbsy.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsmath/amsopn.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/wrapfig/wrapfig.sty
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/wrapfig/wrapfig.sty
 INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/url/url.sty
 INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/url/url.sty
 INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/tex/latex/hyperref/hyperref.sty
@@ -127,6 +139,8 @@ INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/
 INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmmi12.tfm
 INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmex10.tfm
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmex10.tfm
 INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/csfonts/csr12.tfm
 INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/jknappen/ec/tcrm1200.tfm
 INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/csfonts/csr9.tfm
@@ -141,6 +155,9 @@ INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/
 INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmmi6.tfm
 INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmsy8.tfm
 INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmsy6.tfm
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/csfonts/csr6.tfm
 INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/jknappen/ec/tcrm0600.tfm
 INPUT /Users/matvii/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/csfonts/csbx9.tfm
