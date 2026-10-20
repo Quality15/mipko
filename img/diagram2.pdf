@@ -1,0 +1,123 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 250 510] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 2159 >>
+stream
+
+1 w
+0 0 0 RG
+1 1 1 rg
+
+% Box 1: Recenzia (y: 425 to 495 -> h=70)
+25 425 200 70 re B
+0 0 0 RG
+25 470 m 225 470 l S
+0 0 0 rg
+BT /F2 11 Tf 95 478 Td (Recenzia) Tj ET
+BT /F1 9 Tf 35 456 Td (- id: String) Tj ET
+BT /F1 9 Tf 35 443 Td (- text: String) Tj ET
+BT /F1 9 Tf 35 430 Td (- rating: int) Tj ET
+
+% Line from Box 1 to Box 2
+[2 2] 0 d
+0 0 0 RG
+125 425 m 125 390 l S
+[] 0 d
+125 390 m 120 398 l 130 398 l 125 390 l S
+
+% Box 2: Extraktor (y: 315 to 385 -> h=70)
+1 1 1 rg
+25 315 200 70 re B
+0 0 0 RG
+25 352 m 225 352 l S
+0 0 0 rg
+BT /F1 8.5 Tf 78 371 Td (<<rozhranie>>) Tj ET
+BT /F2 10.5 Tf 62 358 Td (ExtraktorPriznakov) Tj ET
+BT /F1 9 Tf 35 338 Td (+ extrahuj(): Vektor) Tj ET
+BT /F1 9 Tf 35 324 Td (+ normalizuj(): void) Tj ET
+
+% Dashed arrows to modules
+[2 2] 0 d
+0 0 0 RG
+80 315 m 65 275 l S
+170 315 m 185 275 l S
+[] 0 d
+65 275 m 60 283 l 70 282 l 65 275 l S
+185 275 m 180 282 l 190 283 l 185 275 l S
+
+% Box 3: JazykovyModul (y: 175 to 270 -> h=95)
+1 1 1 rg
+12 175 108 95 re B
+0 0 0 RG
+12 250 m 120 250 l S
+12 205 m 120 205 l S
+0 0 0 rg
+BT /F2 9.5 Tf 20 256 Td (JazykovyModul) Tj ET
+BT /F1 8 Tf 18 238 Td (- sentiment: float) Tj ET
+BT /F1 8 Tf 18 226 Td (- nGramy: Map) Tj ET
+BT /F1 8 Tf 18 214 Td (- citatelnost: float) Tj ET
+BT /F1 8 Tf 18 192 Td (+ analyzuj(): Vektor) Tj ET
+
+% Box 4: BehavioralnyModul (y: 175 to 270 -> h=95)
+1 1 1 rg
+130 175 108 95 re B
+0 0 0 RG
+130 250 m 238 250 l S
+130 205 m 238 205 l S
+0 0 0 rg
+BT /F2 9 Tf 134 256 Td (BehavioralnyModul) Tj ET
+BT /F1 8 Tf 136 238 Td (- frekvencia: int) Tj ET
+BT /F1 8 Tf 136 226 Td (- deviacia: float) Tj ET
+BT /F1 8 Tf 136 214 Td (- entropia: float) Tj ET
+BT /F1 8 Tf 136 192 Td (+ analyzuj(): Vektor) Tj ET
+
+% Arrows to Klasifikator
+[2 2] 0 d
+0 0 0 RG
+65 175 m 95 125 l S
+185 175 m 155 125 l S
+[] 0 d
+95 125 m 90 133 l 99 132 l 95 125 l S
+155 125 m 151 132 l 160 133 l 155 125 l S
+
+% Box 5: Klasifikator (y: 45 to 120 -> h=75)
+1 1 1 rg
+25 45 200 75 re B
+0 0 0 RG
+25 95 m 225 95 l S
+0 0 0 rg
+BT /F2 11 Tf 82 102 Td (Klasifikator) Tj ET
+BT /F1 9 Tf 35 82 Td (- model: MLModel) Tj ET
+BT /F1 9 Tf 35 69 Td (+ trenuj(data: DataSet): void) Tj ET
+BT /F1 9 Tf 35 56 Td (+ predikuj(v: Vektor): bool) Tj ET
+
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000002462 00000 n 
+0000002532 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+2607
+%%EOF
