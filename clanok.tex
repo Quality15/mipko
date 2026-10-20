@@ -54,7 +54,18 @@ Tento článok vznikol v~rámci semestrálneho projektu v~predmete Metódy inži
 
 \section{Súvisiace práce} \label{suvisiace}
 
+Priekopnícku prácu v oblasti odhaľovania falošných recenzií publikovali Jindal a Liu~\cite{Jindal:2008}, ktorí kategorizovali recenzný spam a identifikovali duplicitné texty ako primárny indikátor manipulácie. Následne Ott a kol.~\cite{Ott:2011} vytvorili prvý štandardizovaný zlatý dataset klamlivých recenzií (deceptive opinion spam) a ukázali, že metódy strojového učenia využívajúce n-gramy a psycholingvistické lexikóny dosahujú výrazne vyššiu úspešnosť než ľudskí posudzovatelia.
+
+Ekonomické aspekty a motivácie komerčných subjektov analyzovali Luca a Zervas~\cite{Luca:2016}, pričom poukázali na to, že reštaurácie a podniky s horšou reputáciou majú signifikantne vyššiu tendenciu publikovať falošné pozitívne recenzie. Mukherjee a kol.~\cite{Mukherjee:2013} sa zamerali na reálne filtrovacie mechanizmy platformy Yelp a demonštrovali nevyhnutnosť kombinovania textových a behaviorálnych atribútov.
+
 \section{Jazykové príznaky} \label{jazykove}
+
+Jazykové príznaky vychádzajú z predpokladu, že autori vymyslených recenzií používajú odlišné štylistické a syntaktické vzory než reálni zákazníci. Medzi kľúčové metriky patrí:
+\begin{itemize}
+  \item \textbf{Lexikálna bohatosť:} Pomer počtu unikátnych slov k celkovému počtu slov (Type-Token Ratio) býva pri falošných recenziách nižší v dôsledku obmedzenej slovnej zásoby.
+  \item \textbf{Distribúcia slovných druhov:} Nadmerné používanie prídavných mien a zámen v prvej osobe signalizuje snahu pôsobiť autenticky bez konkrétnych faktických detailov.
+  \item \textbf{Polarita a subjektivita:} Extrémne pozitívne alebo negatívne sentimenty s nízkou mierou vecnej argumentácie.
+\end{itemize}
 
 Na obr.~\ref{fig:diagramy} sú znázornené dva diagramy vytvorené v~nástroji UMLet/UMLetino: vľavo proces detekcie falošných recenzií (obr.~\ref{fig:diagram1}) a~vpravo architektúra tried extraktora príznakov v~UML notácii (obr.~\ref{fig:diagram2}).
 
@@ -99,6 +110,8 @@ R_n(u) = R_0 + \sum_{k=1}^{n} \left( \alpha \cdot \frac{k^2 + 2k + 1}{k!} + \bet
 
 \section{Porovnanie prístupov} \label{porovnanie}
 
+Kým čisto jazykové prístupy zlyhávajú pri sofistikovaných textoch generovaných modernými veľkými jazykovými modelmi (LLM), behaviorálne analýzy sú robustnejšie voči štylistickým modifikáciám. Na druhej strane, behaviorálne metriky vyžadujú dostatočnú históriu používateľského účtu, čo limituje ich použitie pri nových recenzentoch (problém studeného štartu). Optimálne výsledky preto dosahuje hybridný prístup.
+
 Na obr.~\ref{fig:celostrankovy} je znázornený celkový diagram navrhovanej architektúry systému, ktorý horizontálne prekrýva obidva stĺpce dvojstĺpcového dokumentu pomocou prostredia \texttt{figure*}.
 
 \begin{figure*}[!t]
@@ -110,7 +123,8 @@ Na obr.~\ref{fig:celostrankovy} je znázornený celkový diagram navrhovanej arc
 
 \section{Záver} \label{zaver}
 
+V tejto predbežnej verzii článku sme predstavili štruktúru riešenia detekcie falošných recenzií so zameraním na synergiu textových a behaviorálnych atribútov. V nadväzujúcej fáze projektu sa zameriame na experimentálne vyhodnotenie klasifikátorov na reálnych dátach z portálov Yelp a Amazon a implementáciu hybridného modelu.
 
-% \bibliography{literatura}
-% \bibliographystyle{plain}
+\bibliography{literatura}
+\bibliographystyle{plain}
 \end{document}
