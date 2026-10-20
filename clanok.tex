@@ -78,6 +78,25 @@ Na obr.~\ref{fig:diagramy} sú znázornené dva diagramy vytvorené v~nástroji 
 
 \section{Behaviorálne príznaky} \label{behavioralne}
 
+Behaviorálne príznaky charakterizujú aktivitu používateľov v čase a ich anomálie voči bežnému správaniu. Na reprezentáciu kombinácie jazykových a behaviorálnych metrík pre vzorky recenzií slúži matica príznakov $\mathbf{X}_{5 \times 4}$ v rovnici~(\ref{eq:matica_priznakov}), kde riadky zodpovedajú jednotlivým recenziám a stĺpce predstavujú normalizované hodnoty sentimentu, lexikálnej diverzity, frekvencie publikovania a odchýlky hodnotenia:
+\begin{equation} \label{eq:matica_priznakov}
+\mathbf{X}_{5 \times 4} = 
+\begin{pmatrix}
+0.82 & 0.15 & 14.5 & 2.40 \\
+-0.45 & 0.78 & 1.2 & 0.15 \\
+0.94 & 0.05 & 28.0 & 2.85 \\
+0.12 & 0.65 & 2.1 & 0.40 \\
+-0.78 & 0.42 & 19.3 & 2.10
+\end{pmatrix}
+\end{equation}
+
+Pre modelovanie vývoja reputácie recenzenta $u$ v čase po $n$ publikovaných príspevkoch využívame postupnosť $R_n(u)$. Vzorec~(\ref{eq:rozvoj_postupnosti}) vyjadruje výpočet tejto postupnosti s rozvojom, ktorý presahuje šírku stĺpca, preto je sadzaný pomocou viacriadkového prostredia \texttt{multline}:
+\begin{multline} \label{eq:rozvoj_postupnosti}
+R_n(u) = R_0 + \sum_{k=1}^{n} \left( \alpha \cdot \frac{k^2 + 2k + 1}{k!} + \beta \cdot \lambda^{k-1} \right) \\
+= R_0 + \left( \alpha \frac{4}{1!} + \beta \right) + \left( \alpha \frac{9}{2!} + \beta \lambda \right) + \left( \alpha \frac{16}{6} + \beta \lambda^2 \right) \\
++ \left( \alpha \frac{25}{24} + \beta \lambda^3 \right) + \dots + \left( \alpha \frac{n^2 + 2n + 1}{n!} + \beta \lambda^{n-1} \right)
+\end{multline}
+
 \section{Porovnanie prístupov} \label{porovnanie}
 
 Na obr.~\ref{fig:celostrankovy} je znázornený celkový diagram navrhovanej architektúry systému, ktorý horizontálne prekrýva obidva stĺpce dvojstĺpcového dokumentu pomocou prostredia \texttt{figure*}.
