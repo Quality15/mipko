@@ -1,0 +1,295 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[slovak]{babel}
+\usepackage[a4paper,margin=2.2cm]{geometry}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[protrusion=true,expansion=false]{microtype}
+\usepackage{parskip}
+\usepackage{cite}
+
+\input{projekt-data}
+
+\setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{3em}
+\newcommand{\raggedcell}{\raggedright\arraybackslash}
+
+\begin{document}
+\sloppy
+
+\begin{titlepage}
+\centering
+\vspace*{1.2cm}
+{\Large\bfseries VV-F — Vecný zámer projektu}\\[0.3em]
+{\large Záväzná osnova pre aplikovaný výskum a vývoj}\\[2cm]
+{\LARGE\bfseries \projectTitleSK}\\[0.8em]
+{\large \projectTitleEN}\\[1.5cm]
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{4.2cm} p{9.5cm}@{}}
+\textbf{Akronym:} & \projectAcronym\\
+\textbf{Evidenčné číslo:} & \projectId\\
+\textbf{Žiadateľ:} & \applicant\\
+\textbf{Zodpovedný riešiteľ:} & \piName\\
+\textbf{Dátum:} & \projectDate\\
+\textbf{Obdobie riešenia:} & \projectStart\ -- \projectEnd\\
+\end{tabular}
+\vfill
+{\footnotesize
+Dokument je modelovým návrhom v rozsahu približne 50--60\,\% očakávanej finálnej verzie. Personálne a ekonomické údaje označené ako „doplniť“ treba pred finálnym podaním aktualizovať.
+}
+\end{titlepage}
+
+\section{Excelentnosť}
+
+\subsection{Projektový zámer a aplikačná úroveň}
+
+Online recenzie sú jedným z najvplyvnejších informačných kanálov v elektronickom obchode. Spotrebitelia na ich základe porovnávajú produkty, predajcov a ceny, podniky zase budujú reputáciu a konkurenčnú výhodu. Táto ekonomická hodnota vytvára motiváciu manipulovať recenzným priestorom prostredníctvom platených recenzentov, konkurenčných útokov, koordinovaných skupín účtov alebo automatizovaných nástrojov. Falošné recenzie preto poškodzujú spotrebiteľov, znižujú dôveryhodnosť platforiem a narúšajú férovú súťaž.
+
+Projekt reaguje na medzeru medzi akademickými detektormi a potrebami praxe. Existujúce riešenia sú prevažne anglocentrické, založené na povrchových jazykových príznakoch a v podmienkach generatívnych modelov strácajú spoľahlivosť. Prevádzkovatelia platforiem zároveň potrebujú nielen presný, ale aj vysvetliteľný nástroj, ktorý dokáže rozhodnutie o označení recenzie zdôvodniť a ktorý je možné prevádzkovať bez neprimeraného zásahu do súkromia používateľov.
+
+Projekt preto vyvinie hybridný detektor falošných recenzií, ktorý spája jazykové, behaviorálne a grafové príznaky, doplní ho o vrstvu vysvetlenia a overí v pilotnej prevádzke. Výstupom bude otvorený slovensko-anglický anotovaný dataset, metodika anotácie a hodnotenia, referenčný model, prototyp API a správa pre prax. Projekt začína na úrovni TRL~3 a končí na úrovni TRL~6: od overených laboratórnych postupov k funkčnému prototypu demonštrovanému v relevantnom prostredí.
+
+\subsection{Aktuálnosť a originalita}
+
+Aktuálnosť témy je daná tromi súbežnými trendmi. Prvým je rast elektronického obchodu a závislosti spotrebiteľov od recenzií. Druhým je dostupnosť veľkých jazykových modelov, ktoré dokážu generovať plynulé a štylisticky presvedčivé recenzie v takmer neobmedzenom množstve \cite{zhao2025}. Tretím je regulácia: európsky rámec zakazuje zavádzajúce recenzie a posilňuje transparentnosť platforiem, čím vzniká dopyt po obhájiteľných nástrojoch moderovania.
+
+Originalita projektu spočíva v piatich prvkoch. (i)~Vytvoríme prvý otvorený slovensko-anglický benchmark pre detekciu falošných recenzií s viacnásobnou anotáciou. (ii)~Spojíme textové, behaviorálne a grafové príznaky v jednom modeli a systematicky porovnáme ich prínos. (iii)~Budeme explicitne modelovať recenzie generované LLM, nielen ľuďmi písaný spam. (iv)~Vysvetliteľnosť bude rovnocenným cieľom, nie dodatočnou funkciou. (v)~Výstupy budú otvorené a reprodukovateľné, aby ich mohli využiť ďalšie tímy aj prevádzkovatelia platforiem.
+
+Nejde teda o ďalší izolovaný klasifikátor, ale o metodiku a nástroj, ktorý prepája výskum s moderovaním v praxi. Práve kombinácia dát, hybridného modelovania a vysvetliteľnosti vytvára priestor na originálny príspevok v slovenskom aj medzinárodnom kontexte.
+
+\subsection{Stav poznania a vedecké základy}
+
+Výskum detekcie falošných recenzií sa rozvíja od práce Jindala a Liu~\cite{jindal2008}, ktorí vymedzili taxonómiu recenzného spamu a ukázali, že duplicitné texty sú silným indikátorom manipulácie. Ott a kol.~\cite{ott2011} vytvorili prvý štandardizovaný dataset klamlivých recenzií a demonštrovali, že n-gramy a psycholingvistické lexikóny prekonávajú ľudských posudzovateľov. Ich práca zároveň upozornila na metodologický problém: pri autenticky pôsobiacich textoch sa klasifikátor môže učiť idiosynkrázie konkrétnych autorov namiesto všeobecného pojmu falošnosti.
+
+Ekonomické motivácie analyzovali Luca a Zervas~\cite{luca2016}, ktorí dokumentovali vzťah medzi reputáciou podniku a objednávaním falošných pozitívnych recenzií. Mukherjee a kol.~\cite{mukherjee2013} ukázali, že behaviorálne príznaky môžu byť informatívnejšie než samotný text. Samostatnú líniu predstavujú práce o koordinovaných skupinách a recenzných sieťach: Mukherjee a kol.~\cite{mukherjee2012} odhaľovali falošné recenzentské skupiny, Rayana a Akoglu~\cite{rayana2015} spojili recenzie, recenzentov a produkty do jednej siete a využili šírenie podozrenia medzi prepojenými entitami.
+
+Prehľadové práce \cite{crawford2015} a \cite{heydari2015} zjednotili terminológiu a rozdelili prístupy podľa typu príznakov a úrovne rozhodovania. Barbado a kol.~\cite{barbado2019} overili aplikačný rozmer na doméne spotrebnej elektroniky a Li a kol.~\cite{li2014} ukázali, že existujú relatívne univerzálne, ľudsky interpretovateľné pravidlá prekračujúce hranice datasetu. Zhao a kol.~\cite{zhao2025} napokon dokumentovali, že AI-generované recenzie sú plynulejšie a štylisticky konzistentnejšie než ľudské, čo oslabuje čisto textové detektory.
+
+Napriek tomuto pokroku zostávajú medzery, na ktoré projekt reaguje. Chýba otvorený slovensko-anglický dataset, systematické porovnanie jazykových a behaviorálnych príznakov v podmienkach LLM, prakticky použiteľný hybridný detektor s vysvetliteľnými výstupmi a metodika hodnotenia, ktorá zohľadňuje časový a doménový posun. Vedecké základy projektu preto tvoria štyri oblasti: spracovanie prirodzeného jazyka a štylometria, behaviorálna analýza a dolovanie v grafoch, strojové učenie s dôrazom na kalibráciu a generalizáciu a nakoniec výskum vysvetliteľnosti a používateľskej dôvery.
+
+\subsection{Ciele projektu}
+
+Ciele sú formulované merateľne a viažu sa na konkrétne výstupy a termíny.
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}p{0.8cm} X p{4.2cm} p{1.5cm}@{}}
+\toprule
+\# & Cieľ & Ukazovateľ & Termín \\
+\midrule
+O1 & Vytvoriť otvorený slovensko-anglický anotovaný dataset & minimálne 15\,000 recenzií; $\kappa \geq 0{,}7$ & M12 \\
+O2 & Vyvinúť jazykový model & F1 $\geq 0{,}80$ v rámci domény & M18 \\
+O3 & Vyvinúť behaviorálny a grafový model & F1 $\geq 0{,}75$; odhalenie skupín & M24 \\
+O4 & Skonštruovať hybridný model & F1 $\geq 0{,}85$ in-domain; $\geq 0{,}75$ cross-domain & M30 \\
+O5 & Overiť prototyp v praxi & pilot s 1--2 platformami; vysvetlenie top-$k$ príznakov & M36 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Ciele sú realistické vzhľadom na rozsah projektu, dostupné datasety a skúsenosti tímu. Zároveň sú dostatočne ambiciózne: vyžadujú nielen trénovanie modelov, ale aj tvorbu dát, anotáciu, evaluáciu a pilotné overenie. Splnenie cieľov budeme priebežne vyhodnocovať na míľnikoch M12, M24 a M36.
+
+\subsection{Metodológia}
+
+Metodológia je navrhnutá ako sekvencia ôsmich krokov, ktoré sa čiastočne prekrývajú.
+
+\textbf{1. Zber dát.} Využijeme verejné datasety (napr.\ Ott a kol.~\cite{ott2011}), verejne dostupné recenzie z platforiem a dátové zdroje partnerských organizácií. Doplníme ich syntetickými recenziami generovanými viacerými LLM, aby sme pokryli nový typ hrozby. Pri všetkých dátach budeme dodržiavať licenčné podmienky a GDPR.
+
+\textbf{2. Anotácia.} Vytvoríme anotačné guidelines s definíciami typov falošných recenzií, hraničných prípadov a neurčitých príkladov. Každú recenziu budú anotovať aspoň dvaja nezávislí anotátori; nezhody vyrieši tretí anotátor. Kvalitu budeme merať Cohenovou kappa a pravidelnými kalibračnými stretnutiami.
+
+\textbf{3. Predspracovanie.} Text normalizujeme, identifikujeme jazyk, odstránime duplicity a citlivé údaje. Pre slovenčinu využijeme dostupné nástroje na tokenizáciu, lemmatizáciu a morfologickú analýzu; pri angličtine použijeme štandardné NLP nástroje.
+
+\textbf{4. Extrakcia príznakov.} Jazykové príznaky zahŕňajú lexikálnu bohatosť, distribúciu slovných druhov, sentiment, subjektivitu, štylometrické markery a transformer-ové reprezentácie. Behaviorálne príznaky zahŕňajú históriu recenzenta, frekvenciu, burstiness, ratingovú odchýlku a overený nákup. Grafové príznaky zahŕňajú bipartitný graf recenzent--produkt, ko-recenzné skupiny a miery centrality.
+
+\textbf{5. Modelovanie.} Ako baselines použijeme logistickú regresiu, SVM a gradientové boosting. Následne natrénujeme transformer (BERT alebo jeho viacjazyčný variant) a grafovú neurónovú sieť. Hybridný model vznikne early fusion (spoločný vektor príznakov) a late fusion (vážená kombinácia rozhodnutí); porovnáme oba varianty.
+
+\textbf{6. Evaluácia.} Použijeme stratifikovanú krížovú validáciu, časové rozdelenie a rozdelenie podľa domén. Sledujeme precision, recall, F1, AUROC, mieru falošných pozitív pri fixnom zachytení a kalibráciu (ECE). Súčasťou je aj testovanie na novom jazyku a na adversariálnych príkladoch.
+
+\textbf{7. Vysvetliteľnosť.} Pre globálne vysvetlenie použijeme SHAP a permutation importance, pre lokálne vysvetlenie LIME a attention. Overíme, či vysvetlenia zodpovedajú intuícii moderátorov a či zvyšujú ich dôveru v model.
+
+\textbf{8. Pilot.} Prototyp nasadíme v režime tieňového rozhodovania, aby neovplyvňoval reálne rozhodnutia. Zbierame spätnú väzbu moderátorov, meriame čas rozhodovania a mieru falošných pozitív. Výsledky použijeme na finálnu kalibráciu a na správu pre prax.
+
+Etický rámec zahŕňa minimalizáciu osobných údajov, anonymizáciu, informovaný súhlas pri partnerských dátach a nezávislý pohľad na riziko zneužitia detektora na cenzúru legitímnych recenzií.
+
+\subsection{Predchádzajúce výsledky a kompetencie}
+
+Zodpovedný riešiteľ \piName\ pôsobí na FIIT STU (Ústav informatiky a softvérového inžinierstva) a dlhodobo sa venuje softvérovému inžinierstvu, práci s dátami a vedeniu študentských projektových tímov (predmet Tímový projekt). Expertízu tímu v oblasti spracovania prirodzeného jazyka a strojového učenia zabezpečí spolupráca so špecialistami fakulty a mladými riešiteľmi. Konkrétne výstupy a projekty za posledných 5 rokov doplníme pred podaním podľa životopisu zodpovedného riešiteľa; štruktúra je pripravená v tabuľkách nižšie.
+
+Jeho víziou je budovať výskumný tím zameraný na dôveryhodnú analýzu textu a správania, systematicky rozvíjať expertízu v oblasti vysvetliteľného strojového učenia a vytvárať priestor pre kariérny rast mladých výskumníkov — od semestrálnych projektov cez diplomové práce až po doktorandské štúdium a vlastné grantové projekty.
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}p{0.8cm} X p{2.0cm}@{}}
+\toprule
+\# & Najdôležitejší výstup za posledných 5 rokov & Rok \\
+\midrule
+V1 & \emph{doplniť názov publikácie/výstupu a jeho význam} & doplniť \\
+V2 & \emph{doplniť názov publikácie/výstupu a jeho význam} & doplniť \\
+V3 & \emph{doplniť názov publikácie/výstupu a jeho význam} & doplniť \\
+V4 & \emph{doplniť názov publikácie/výstupu a jeho význam} & doplniť \\
+V5 & \emph{doplniť názov publikácie/výstupu a jeho význam} & doplniť \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}p{0.8cm} X p{2.2cm} p{1.6cm}@{}}
+\toprule
+\# & Projekt (názov, schéma, roky, rozpočet, pozícia) & Rola & Význam \\
+\midrule
+P1 & \emph{doplniť} & \emph{doplniť} & \emph{doplniť} \\
+P2 & \emph{doplniť} & \emph{doplniť} & \emph{doplniť} \\
+P3 & \emph{doplniť} & \emph{doplniť} & \emph{doplniť} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Organizácia disponuje laboratóriami, výpočtovou infraštruktúrou a prístupom k vedeckým databázam. Fakulta má skúsenosti s riešením grantových projektov, s vedením bakalárskych a diplomových prác a s publikovaním v oblasti informatiky. Pre projekt je dôležitá aj medzinárodná spolupráca a možnosť konzultovať výsledky s odborníkmi z praxe.
+
+\subsection{Zapojenie mladých pracovníkov}
+
+Na riešení sa podieľajú štyria študenti druhého stupňa, ktorí tvoria 80\,\% riešiteľského tímu. Matvii Nosenko sa zameria na NLP a modely strojového učenia, Volodymyr Nedoluha na zber a spracovanie dát, Danylo Nikolenko na backend a API a Rostyslav Mykytiuk na evaluáciu a vizualizáciu výsledkov. Expertízu jednotlivých riešiteľov tvoria kvalifikačné a semestrálne práce v oblasti spracovania prirodzeného jazyka, analýzy dát a softvérového inžinierstva; pred podaním ju doplníme o konkrétne výsledky a skúsenosti. Každý z nich bude mať možnosť publikovať ako spoluautor, zúčastniť sa konferencie a získať praktické skúsenosti s riešením aplikovaného projektu. Plán rozvoja zahŕňa pravidelné odborné semináre, revízie kódu a mentoring zo strany zodpovedného riešiteľa.
+
+\section{Dopad}
+
+\subsection{Prínosy pre poznanie, aplikovaný výskum a inovácie}
+
+Projekt prinesie štyri druhy prínosov. Prvým je otvorený slovensko-anglický dataset a benchmark, ktorý umožní reprodukovateľné porovnávanie metód a podporí ďalší výskum v slovenskom kontexte. Druhým je hybridná metodika, ktorá systematicky meria prínos jazykových, behaviorálnych a grafových príznakov a ukazuje, kedy sa ktorá skupina vyplatí. Tretím je model s vysvetliteľnými výstupmi, ktorý prepája presnosť s dôveryhodnosťou pre moderátorov. Štvrtým je prototyp API a dashboard, ktorý demonštruje použiteľnosť v praxi.
+
+Z hľadiska inovácií ide o novú službu pre prevádzkovateľov platforiem: modulárny detektor, ktorý možno nasadiť ako súčasť moderovacieho procesu alebo ako samostatnú analytickú vrstvu. Riešenie nie je viazané na konkrétnu platformu a jeho architektúra umožňuje rozšírenie o ďalšie jazyky a domény.
+
+\subsection{Využiteľnosť výsledkov v SR a zahraničí}
+
+Na Slovensku môžu výsledky využiť prevádzkovatelia e-shopov a trhovísk, recenzné portály, profesijné asociácie a orgány ochrany spotrebiteľa. V zahraničí je potenciál najmä v krajinách EÚ, kde platí spoločný regulačný rámec pre zavádzajúce recenzie a transparentnosť platforiem. Dataset a metodika sú jazykovo rozšíriteľné, takže ich možno adaptovať na český, poľský alebo maďarský jazyk.
+
+Výsledky budú využiteľné v troch režimoch: (i)~offline analýza historických dát pre audit a reporting; (ii)~online asistencia moderátorovi s vysvetlením a prioritizáciou podozrivých recenzií; (iii)~monitorovanie trendov a nových typov útokov. Každý režim má iné požiadavky na latenciu, vysvetliteľnosť a ochranu údajov, čo projekt zohľadní v návrhu API.
+
+\subsection{Ekonomický a spoločenský prínos}
+
+Falošné recenzie spôsobujú priame straty spotrebiteľom, poškodzujú poctivých predajcov a zvyšujú náklady platforiem na moderovanie. Presnejší a vysvetliteľný detektor môže tieto náklady znížiť, zvýšiť dôveru v recenzie a zlepšiť kvalitu rozhodovania. Prínos je zároveň spoločenský: ochrana spotrebiteľov, transparentnosť a férová súťaž.
+
+Kvantifikácia prínosu bude predmetom pilotu. Budeme sledovať počet odhalených podozrivých recenzií, mieru falošných pozitív, čas moderátora na jedno rozhodnutie a subjektívnu dôveru moderátorov. Ekonomický prínos vyjadríme ako odhad úspory času a zníženia počtu sťažností; pôjde o konzervatívny odhad, nie o marketingové číslo.
+
+\subsection{Opatrenia na maximalizáciu dopadu a komunikácia}
+
+Projekt bude priebežne zverejňovať výsledky formou odborných článkov, preprintov, workshopov a krátkych správ pre prax. Dataset a kód sprístupníme za jasných licenčných podmienok. Pre prevádzkovateľov pripravíme praktického sprievodcu nasadením a pre regulátorov stručný policy brief. Komunikácia bude prebiehať cez web fakulty, odborné podujatia a partnerské kanály.
+
+Meranie dopadu bude na troch úrovniach: vedeckej (publikácie, citácie, využitie datasetu), technologickej (počet nasadení, latencia, presnosť) a spoločenskej (počet chránených spotrebiteľov, zníženie sťažností). Tieto ukazovatele budeme vyhodnocovať na konci projektu a priebežne na míľnikoch.
+
+\section{Implementácia}
+
+\subsection{Projektový plán, pracovné balíky a výstupy}
+
+Projekt je rozdelený na sedem pracovných balíkov, ktoré sa čiastočne prekrývajú. Každý balík má zodpovedného riešiteľa, výstupy a míľnik.
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}p{0.8cm} X p{3.0cm} p{1.4cm}@{}}
+\toprule
+WP & Názov a obsah & Výstup & Mesiace \\
+\midrule
+WP1 & Manažment, koordinácia, reporting, riadenie rizík & plán, správy & 1--36 \\
+WP2 & Zber, anotácia a sprístupnenie dát & dataset, guidelines & 1--12 \\
+WP3 & Jazykové modely a baseline & model, evaluácia & 7--18 \\
+WP4 & Behaviorálne a grafové modely & model, evaluácia & 13--24 \\
+WP5 & Hybridný model a vysvetliteľnosť & prototyp & 19--30 \\
+WP6 & Pilotné overenie a evaluácia & pilotná správa & 25--36 \\
+WP7 & Diseminácia a komunikácia & publikácie, web & 1--36 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Výstupy sú navrhnuté tak, aby na seba nadväzovali: dataset a guidelines sú predpokladom pre modely, modely pre hybridný prototyp a prototyp pre pilot. Každý výstup má jasného vlastníka a kontrolu kvality.
+
+\subsection{Harmonogram a míľniky}
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}p{1.2cm} X p{1.8cm}@{}}
+\toprule
+Míľnik & Popis & Termín \\
+\midrule
+M6 & Schválená metodika anotácie a etický rámec & 06/2027 \\
+M12 & Dataset SK/EN s minimálne 15\,000 recenziami & 12/2027 \\
+M18 & Jazykový model a prvá publikácia & 06/2028 \\
+M24 & Behaviorálny a grafový model & 12/2028 \\
+M30 & Hybridný model a prototyp API & 06/2029 \\
+M36 & Pilotná správa, finálne vyhodnotenie a druhá publikácia & 12/2029 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Projektový manažment}
+
+Projekt bude riadený zodpovedným riešiteľom, ktorý rozhoduje o prioritách, rozpočte a personálnych otázkach. Operatívne riadenie zabezpečí projektový koordinátor z tímu. Budeme používať pravidelné týždenné stretnutia, mesačné revízie a štvrťročné hodnotiace správy. Úlohy budeme evidovať v Jira a kód v Git repozitári; každá zmena bude mať issue key a code review.
+
+Kontrolné mechanizmy zahŕňajú: (i)~kontrolu kvality dát pred uzamknutím datasetu; (ii)~reprodukovateľ\-nosť experimentov cez fixné seeds a verzovanie; (iii)~nezávislú revíziu evaluačného protokolu; (iv)~etickú kontrolu pred prácou s partnerskými dátami. Riziká budeme priebežne aktualizovať v registri rizík a na mesačných revíziách.
+
+\subsection{Riziká implementácie a ich zmiernenie}
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}p{3.3cm} X X@{}}
+\toprule
+Riziko & Dopad & Zmiernenie \\
+\midrule
+Obmedzený prístup k dátam & oneskorenie WP2 & verejné datasety, syntetické dáta, včasné rokovanie s partnermi \\
+Nízka kvalita anotácie & skreslené výsledky & guidelines, viac anotátorov, kappa, kalibrácia \\
+Nezvyknutý nepomer tried & nízky recall & cost-sensitive learning, resampling, kalibrácia \\
+Posun distribúcie a LLM drift & pokles presnosti & časové testy, priebežné učenie, adversariálne testovanie \\
+GDPR a citlivé údaje & právne riziko & minimalizácia, anonymizácia, súhlasy, etická kontrola \\
+Odchod člena tímu & strata znalostí & dokumentácia, párové programovanie, zastupiteľnosť \\
+Závislosť na partnerovi & oneskorenie pilotu & viac partnerov, offline pilot, jasné zmluvy \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Rozpočet}
+
+Rozpočet vychádza z 36 mesiacov riešenia a je detailne rozpísaný vo formulári VV-C. Celkové náklady sú \budgetTotal\ EUR, z toho \budgetAPVV\ EUR z APVV a \budgetCoFin\ EUR zo spolufinancovania. Najväčšiu časť tvoria mzdové náklady a odvody, nasledujú služby, cestovné a nepriame náklady.
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+\toprule
+Kategória & Spolu (EUR) \\
+\midrule
+Mzdové náklady a ostatné osobné náklady & 140\,000 \\
+Zdravotné a sociálne poistenie & 49\,000 \\
+Cestovné náklady & 15\,000 \\
+Materiál & 12\,000 \\
+Služby & 30\,000 \\
+Energie, vodné, stočné, komunikácie & 4\,000 \\
+Náklady na popularizáciu & 8\,000 \\
+Bežné nepriame náklady & 42\,000 \\
+\midrule
+Celkové náklady & 300\,000 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Rozpočet je primeraný cieľom: najviac prostriedkov smeruje na ľudskú prácu (anotácia, modelovanie, evaluácia), ktorá je pre projekt kritická. Cestovné náklady pokrývajú konferencie a stretnutia s partnermi, služby zahŕňajú cloudový výpočet a právne poradenstvo. Pred finálnym podaním rozpočet preveríme podľa taríf organizácie a podmienok výzvy.
+
+\subsection{Infraštruktúra}
+
+FIIT STU disponuje výpočtovou infraštruktúrou, laboratóriami a prístupom k vedeckým databázam. Pre projekt využijeme servery s GPU pre trénovanie transformerov, úložisko pre datasety a zabezpečené prostredie pre prácu s citlivými dátami. Personálnu infraštruktúru tvoria štyria študenti, zodpovedný riešiteľ a administratívna podpora fakulty. V prípade potreby doplníme cloudové zdroje z rozpočtu projektu.
+
+{\small
+\bibliographystyle{unsrt}
+\bibliography{literatura}
+}
+
+\end{document}

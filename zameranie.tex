@@ -1,0 +1,47 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[slovak]{babel}
+\usepackage[a4paper,margin=2.2cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage[protrusion=true,expansion=false]{microtype}
+\usepackage{parskip}
+
+\input{projekt-data}
+
+\setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{3em}
+
+\begin{document}
+
+\begin{center}
+{\Large\bfseries Zameranie projektu}\\[0.4em]
+{\large Názov projektu, akronym a anotácia}\\[0.8em]
+{\small Schválené zameranie — odovzdané 04.10.2026, hodnotené cvičiacim na maximum (5/5 b).}\\
+{\small Pokrýva položky VV-A1-03 (názov), VV-A1-04 (akronym) a VV-A1-09 (anotácia, max. 2\,000 znakov) formulára „Vzor žiadosti pre aplikovaný výskum“ (APVV VV 2024, Príloha 5).}
+\end{center}
+
+\vspace{0.8em}
+
+\section*{VV-A1-03 — Názov projektu}
+\textbf{Názov v slovenskom jazyku:} \projectTitleSK
+
+\textbf{Názov v anglickom jazyku:} \projectTitleEN\\
+{\small\emph{Anglický názov nebol v schválenom zameraní uvedený; pre dvojjazyčný formulár používame tento preklad.}}
+
+\section*{VV-A1-04 — Akronym projektu}
+\projectAcronym\\
+{\small\emph{Akronym nebol v schválenom zameraní uvedený; pre potreby formulára VV-A1-04 navrhujeme tento akronym.}}
+
+\section*{VV-A1-09 — Anotácia projektu (max. 2\,000 znakov)}
+\projectAnnotation
+
+\vspace{0.6em}
+Anotácia má 369 znakov vrátane medzier (limit 2\,000 znakov).
+
+\vspace{1.5em}
+{\footnotesize Poznámka: slovenský názov a anotácia zodpovedajú presnému zneniu schváleného zamerania (súbor \nolinkurl{old_zameranie_clanok.tex}, odovzdaný 04.10.2026). Anglický názov a akronym sú odvodené pre potreby formulárov; ich finálne znenie potvrdí vyučujúci.}
+
+\end{document}

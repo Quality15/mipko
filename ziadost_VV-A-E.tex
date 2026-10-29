@@ -1,0 +1,349 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[slovak]{babel}
+\usepackage[a4paper,margin=1.8cm]{geometry}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[protrusion=true,expansion=false]{microtype}
+\usepackage{parskip}
+
+\input{projekt-data}
+
+\setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{3em}
+\newcommand{\formsection}[1]{%
+  \section*{\raggedright #1}%
+  \vspace{-0.4em}%
+}
+\newcommand{\field}[2]{\textbf{#1} & #2 \\}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace*{1.5cm}
+{\Large\bfseries Žiadosť o riešenie projektu aplikovaného výskumu a vývoja}\\[0.4em]
+{\large Formuláre VV-A až VV-E}\\[2.5cm]
+{\LARGE\bfseries \projectTitleSK}\\[0.8em]
+{\large \projectTitleEN}\\[2cm]
+\begin{tabular}{rl}
+\textbf{Akronym:} & \projectAcronym\\
+\textbf{Evidenčné číslo:} & \projectId\\
+\textbf{Dátum podania:} & \projectDate\\
+\textbf{Žiadateľ:} & \parbox[t]{9.2cm}{\raggedright \applicant}\\
+\end{tabular}
+\vfill
+{\footnotesize
+Dokument je modelovým návrhom vypracovaným v rámci semestrálneho projektu v predmete Metódy inžinierskej práce. Ekonomické údaje a niektoré personálne údaje sú odhadom a pred finálnym podaním ich treba doplniť alebo potvrdiť.
+}
+\end{titlepage}
+
+\newpage
+
+% ---------------------------------------------------------------
+\formsection{VV-A1 — Základné informácie o projekte}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{5.7cm} X@{}}
+\toprule
+\textbf{Pole} & \textbf{Údaj} \\
+\midrule
+01 Evidenčné číslo projektu & \projectId \\
+02 Dátum podania & \projectDate \\
+03 Názov projektu (SK) & \projectTitleSK \\
+03 Názov projektu (EN) & \projectTitleEN \\
+04 Akronym projektu & \projectAcronym \\
+05 Odbor vedy a techniky & Informatika — počítačové vedy a informačné systémy \\
+06 Charakter výskumu & Aplikovaný výskum \\
+07 Začiatok riešenia projektu & \projectStart \\
+08 Koniec riešenia projektu & \projectEnd \\
+09 Anotácia (max.\ 2\,000 znakov) & \projectAnnotation \\
+10 Žiadateľská organizácia & \applicant \\
+11 Požadované finančné prostriedky z APVV & \budgetAPVV\ EUR \\
+12 Spolufinancovanie projektu & \budgetCoFin\ EUR \\
+13 Celkové náklady na projekt & \budgetTotal\ EUR \\
+\bottomrule
+\end{tabularx}
+
+\newpage
+% ---------------------------------------------------------------
+\formsection{VV-A2 — Základné informácie o riešiteľských organizáciách}
+
+\subsection*{Žiadateľ}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{5.7cm} X@{}}
+\toprule
+\textbf{Pole} & \textbf{Údaj} \\
+\midrule
+01 Názov organizácie & \applicant \\
+02 Skrátený názov & \applicantShort \\
+03 Adresa organizácie & \applicantAddress \\
+04 IČO & \applicantICO \\
+05 Príslušnosť k rezortu & Školstvo, veda, výskum a šport \\
+06 Forma hospodárenia & Verejná vysoká škola \\
+07 Kontaktná osoba & Matvii Nosenko, \texttt{xnosenko@stuba.sk}, \applicantPhone \\
+08 Štatutárny zástupca I & \statutory, \statutoryRole \\
+09 Štatutárny zástupca II & — \\
+\bottomrule
+\end{tabularx}
+
+\subsection*{Spoluriešiteľská organizácia}
+Bez spoluriešiteľskej organizácie. Projekt je riešený na jednej organizácii; pilotní partneri z praxe budú určení počas riešenia a ich účasť sa upraví zmluvne.
+
+\newpage
+% ---------------------------------------------------------------
+\formsection{VV-A3 — Zoznam riešiteľov}
+
+\subsection*{01 Zamestnanci priamo sa podieľajúci na riešení projektu}
+{\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\begin{longtable}{@{}p{0.5cm} p{2.9cm} p{1.1cm} p{2.5cm} p{2.2cm} p{1.7cm} p{2.2cm} p{1.2cm}@{}}
+\toprule
+\# & Meno a priezvisko & Tituly & Pracovné zaradenie & Dátum narodenia & IČO organizácie & Počet hodín/rok & Mladý \\
+\midrule
+\endhead
+1 & Ivan Kapustík & Ing. & zodpovedný riešiteľ & doplniť & \applicantICO & 600 (doplniť) & nie \\
+2 & Matvii Nosenko & Bc. & študent -- riešiteľ & doplniť & \applicantICO & 400 (doplniť) & áno \\
+3 & Volodymyr Nedoluha & Bc. & študent -- riešiteľ & doplniť & \applicantICO & 400 (doplniť) & áno \\
+4 & Danylo Nikolenko & Bc. & študent -- riešiteľ & doplniť & \applicantICO & 400 (doplniť) & áno \\
+5 & Rostyslav Mykytiuk & Bc. & študent -- riešiteľ & doplniť & \applicantICO & 400 (doplniť) & áno \\
+\bottomrule
+\end{longtable}
+}
+
+\vspace{0.5em}
+Poznámka: dátumy narodenia a reálne kapacity treba pred podaním doplniť. Stĺpec „Mladý“ je rozšírenie oproti úradnému vzoru — ukazuje podiel mladých pracovníkov do 35 rokov (80\,\% tímu).
+
+\subsection*{02 Ostatní zamestnanci}
+Modelovo predpokladáme administratívnu a technickú podporu organizácie v rozsahu približne 300 hodín ročne (doplniť podľa reálnej kapacity organizácie).
+
+\subsection*{03 Spolu}
+Celkový počet zamestnancov priamo sa podieľajúcich na riešení: 5. Súhrnná kapacita zamestnancov vrátane podpory: približne 2\,500 hodín ročne (modelové údaje, doplniť).
+
+\newpage
+% ---------------------------------------------------------------
+\formsection{VV-A4 — Základné informácie o zodpovednom riešiteľovi}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{5.7cm} X@{}}
+\toprule
+\textbf{Pole} & \textbf{Údaj} \\
+\midrule
+01 Meno a priezvisko & \piName \\
+02 Pohlavie & muž \\
+03 Telefón & doplniť (ústredňa fakulty: \applicantPhone) \\
+04 E-mail & \texttt{\piEmail} \\
+05 Zodpovedný riešiteľ je mladým vedeckým pracovníkom & nie \\
+06a Typ vedeckej databázy / ID výskumníka & ORCID: 0000-0000-0000-0000 (doplniť) \\
+06b Typ vedeckej databázy / ID výskumníka & doplniť (napr. Web of Science ResearcherID, Scopus Author ID) \\
+06c Typ vedeckej databázy / ID výskumníka & doplniť \\
+07 Prehľad projektov zodpovedného riešiteľa za posledných 5 rokov & počet: doplniť; štruktúra položky: názov projektu, grantová schéma, roky realizácie, rozpočet, pozícia zodpovedného riešiteľa \\
+08 Expertízy, konzultácie a ostatné výsledky s priamym využitím v hospodárskej a spoločenskej praxi za posledných 5 rokov & počet: doplniť; zoznam: doplniť \\
+09 Aplikačné výstupy — chránené & počet: doplniť (napr. patent, vynález, úžitkový vzor a zaradenie do TRL) \\
+\bottomrule
+\end{tabularx}
+
+\subsection*{Čestné vyhlásenie zodpovedného riešiteľa}
+Ja, dolu podpísaný/á \piName, čestne vyhlasujem, že údaje uvedené v častiach „Základné informácie o zodpovednom riešiteľovi“ a v štruktúrovanom profesijnom životopise sú pravdivé.
+
+Ja, dolu podpísaný/á \piName, čestne vyhlasujem, že v rámci riešenia projektu budú zo strany žiadateľa rešpektované všetky zásady etických princípov vyplývajúce z európskej a národnej legislatívy.
+
+\vspace{0.8em}
+Podpis zodpovedného riešiteľa: \dotfill\ Miesto: Bratislava, dátum: \projectDate
+
+\newpage
+% ---------------------------------------------------------------
+\formsection{VV-B — Ciele, zámery a výstupy projektu}
+
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{5.7cm} X@{}}
+\toprule
+\textbf{Pole} & \textbf{Údaj} \\
+\midrule
+01 Kľúčové slová & falošné recenzie; recenzný spam; spracovanie prirodzeného jazyka; behaviorálna analýza; hybridný model; vysvetliteľnosť; slovenský jazyk \\
+02 Ciele projektu & viď zoznam nižšie \\
+03 Zaradenie projektu do TRL & TRL 3 na začiatku, TRL 6 na konci \\
+03 Zdôvodnenie zaradenia & Projekt začína overenými laboratórnymi postupmi a končí funkčným prototypom overeným v pilotnej prevádzke \\
+03 Zaradenie výstupov do TRL & dataset a metodika: TRL 4; model: TRL 5; prototyp API: TRL 6 \\
+04 Využitie výsledkov — odberateľ (realizátor) je žiadateľ & nasadenie detektora vo vlastných výskumných, vzdelávacích a konzultačných aktivitách FIIT STU \\
+04 Využitie výsledkov — iný odberateľ & prevádzkovatelia e-shopov a recenzných platforiem; orgány ochrany spotrebiteľa a regulátor \\
+05 Prehľad výstupov & viď tabuľku nižšie \\
+\bottomrule
+\end{tabularx}
+
+\subsection*{Ciele projektu}
+\begin{enumerate}[label=O\arabic*., leftmargin=*]
+  \item Vytvoriť otvorený slovensko-anglický anotovaný dataset s minimálne 15\,000 recenziami a mierou zhody anotátorov $\kappa \geq 0{,}7$.
+  \item Vyvinúť a vyhodnotiť jazykový model dosahujúci F1 najmenej 0{,}80 v rámci domény.
+  \item Vyvinúť behaviorálny a grafový model dosahujúci F1 najmenej 0{,}75 a odhaľujúci koordinované skupiny.
+  \item Skonštruovať hybridný model s F1 najmenej 0{,}85 v rámci domény a 0{,}75 pri prenose na novú doménu.
+  \item Dodať prototyp API s vysvetlením top-$k$ príznakov a overiť ho v pilotnej prevádzke s prevádzkovateľmi platforiem.
+\end{enumerate}
+
+\subsection*{Prehľad plánovaných výstupov}
+\begin{tabularx}{\textwidth}{@{}p{1.2cm} X p{3.0cm}@{}}
+\toprule
+\# & Výstup & Termín \\
+\midrule
+V1 & Metodika anotácie a anotačné guidelines & M6 \\
+V2 & Otvorený dataset SK/EN & M12 \\
+V3 & Jazykový model a vyhodnotenie & M18 \\
+V4 & Behaviorálny a grafový model & M24 \\
+V5 & Hybridný model s vysvetliteľnosťou & M30 \\
+V6 & Prototyp API a pilotná správa & M36 \\
+V7 & Dve odborné publikácie a jedna správa pre prax & M36 \\
+\bottomrule
+\end{tabularx}
+
+\newpage
+% ---------------------------------------------------------------
+\formsection{VV-C — Rozpočet projektu v EUR}
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}X r r r r@{}}
+\toprule
+\textbf{Kategória} & \textbf{2027} & \textbf{2028} & \textbf{2029} & \textbf{Spolu} \\
+\midrule
+01 Bežné priame náklady & & & & \\
+02 Mzdové náklady a ostatné osobné náklady & 45\,000 & 50\,000 & 45\,000 & 140\,000 \\
+03 Zdravotné a sociálne poistenie & 15\,750 & 17\,500 & 15\,750 & 49\,000 \\
+04 Cestovné náklady & 5\,000 & 5\,000 & 5\,000 & 15\,000 \\
+05 Materiál & 4\,000 & 4\,000 & 4\,000 & 12\,000 \\
+06 Služby & 10\,000 & 10\,000 & 10\,000 & 30\,000 \\
+07 Energie, vodné, stočné, komunikácie & 1\,500 & 1\,500 & 1\,000 & 4\,000 \\
+08 Náklady na popularizáciu & 2\,000 & 3\,000 & 3\,000 & 8\,000 \\
+09 Bežné nepriame náklady & 11\,750 & 19\,000 & 11\,250 & 42\,000 \\
+\midrule
+10 Bežné náklady spolu & 95\,000 & 110\,000 & 95\,000 & 300\,000 \\
+\midrule
+Celkové náklady z APVV & 85\,000 & 98\,000 & 85\,000 & 268\,000 \\
+Spolufinancovanie & 10\,000 & 12\,000 & 10\,000 & 32\,000 \\
+\midrule
+Celkové náklady & 95\,000 & 110\,000 & 95\,000 & 300\,000 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection*{Spolufinancovanie — rozdelenie podľa zdroja}
+\begin{tabularx}{\textwidth}{@{}X r r r r@{}}
+\toprule
+\textbf{Zdroj} & \textbf{2027} & \textbf{2028} & \textbf{2029} & \textbf{Spolu} \\
+\midrule
+Štátne (mimo zdrojov APVV) & 10\,000 & 12\,000 & 10\,000 & 32\,000 \\
+Zahraničné & 0 & 0 & 0 & 0 \\
+Súkromné & 0 & 0 & 0 & 0 \\
+\midrule
+Spolufinancovanie spolu & 10\,000 & 12\,000 & 10\,000 & 32\,000 \\
+\bottomrule
+\end{tabularx}
+
+\subsection*{Rozpis predpokladaných nákladov uplatňovaných z APVV (žiadateľ)}
+\begin{tabularx}{\textwidth}{@{}X r r r r@{}}
+\toprule
+\textbf{Kategória} & \textbf{2027} & \textbf{2028} & \textbf{2029} & \textbf{Spolu} \\
+\midrule
+02 Mzdové náklady a ostatné osobné náklady & 42\,000 & 46\,000 & 42\,000 & 130\,000 \\
+03 Zdravotné a sociálne poistenie & 14\,700 & 16\,100 & 14\,700 & 45\,500 \\
+04 Cestovné náklady & 4\,000 & 4\,000 & 4\,000 & 12\,000 \\
+05 Materiál & 3\,500 & 3\,500 & 3\,500 & 10\,500 \\
+06 Služby & 8\,000 & 10\,000 & 8\,000 & 26\,000 \\
+07 Energie, vodné, stočné, komunikácie & 1\,200 & 1\,300 & 1\,200 & 3\,700 \\
+08 Náklady na popularizáciu & 2\,000 & 2\,600 & 2\,000 & 6\,600 \\
+09 Bežné nepriame náklady & 9\,600 & 14\,500 & 9\,600 & 33\,700 \\
+\midrule
+Spolu z APVV & 85\,000 & 98\,000 & 85\,000 & 268\,000 \\
+\bottomrule
+\end{tabularx}
+
+Poznámka: rozpočet je modelový a vychádza z odhadu pracnosti 36 mesiacov. Rozpis pokrýva náklady financované z APVV; rozdiel medzi celkovými nákladmi a rozpisom uhradí spolufinancovanie. Pred finálnym podaním ho treba prepracovať podľa reálnych taríf organizácie a podmienok výzvy.
+
+\newpage
+% ---------------------------------------------------------------
+\formsection{VV-D — Harmonogram projektu}
+
+\begin{tabularx}{\textwidth}{@{}p{0.8cm} p{1.8cm} p{1.8cm} X p{1.8cm}@{}}
+\toprule
+\# & Začiatok & Koniec & Názov etapy & Míľnik \\
+\midrule
+1 & 01/2027 & 06/2027 & WP1 Manažment projektu a príprava & M6 \\
+2 & 01/2027 & 12/2027 & WP2 Zber, anotácia a sprístupnenie dát & M12 \\
+3 & 07/2027 & 06/2028 & WP3 Jazykové modely & M18 \\
+4 & 01/2028 & 12/2028 & WP4 Behaviorálne a grafové modely & M24 \\
+5 & 07/2028 & 06/2029 & WP5 Hybridný model a vysvetliteľnosť & M30 \\
+6 & 01/2029 & 12/2029 & WP6 Pilotné overenie a evaluácia & M36 \\
+7 & 01/2027 & 12/2029 & WP7 Diseminácia a komunikácia & priebežne \\
+\bottomrule
+\end{tabularx}
+
+\subsection*{Míľniky}
+\begin{itemize}[leftmargin=*]
+  \item M6: schválená metodika anotácie a etický rámec.
+  \item M12: dataset SK/EN s minimálne 15\,000 recenziami.
+  \item M18: jazykový model a prvá publikácia.
+  \item M24: behaviorálny a grafový model.
+  \item M30: hybridný model a prototyp API.
+  \item M36: pilotná správa, finálne vyhodnotenie a druhá publikácia.
+\end{itemize}
+
+\subsection*{Zoznam prístrojov v projekte}
+\begin{tabularx}{\textwidth}{@{}X X@{}}
+\toprule
+\textbf{Názov} & \textbf{Popis} \\
+\midrule
+Výpočtový server s GPU (FIIT STU) & trénovanie a evaluácia transformerových modelov; zdieľaná infraštruktúra fakulty \\
+Pracovné stanice riešiteľov & predspracovanie dát, anotácia, exploratívna analýza \\
+Úložisko a verzovací server & uchovanie datasetu, kódu a experimentov (Git, zálohy) \\
+\bottomrule
+\end{tabularx}
+
+\newpage
+% ---------------------------------------------------------------
+\formsection{VV-E — Čestné vyhlásenie štatutárneho zástupcu žiadateľskej organizácie}
+
+Ja, dolu podpísaný/á \statutory, \statutoryRole{} organizácie \applicant, záväzne vyhlasujem, že:
+
+\begin{itemize}[leftmargin=*]
+  \item organizácia má platné osvedčenie o spôsobilosti vykonávať výskum a vývoj v zmysle podmienok stanovených vo verejnej výzve v súlade s \S~26a zákona č.~172/2005 Z.~z. v znení neskorších predpisov a je evidovaná v zozname spôsobilých osôb vykonávať výskum a vývoj;
+  \item všetky informácie obsiahnuté v dokumentácii návrhu sú pravdivé;
+  \item organizácia má, resp. zabezpečí vlastné zdroje na spolufinancovanie projektu;
+  \item predložený návrh projektu nebol a nie je financovaný z iných zdrojov (národných alebo zahraničných);
+  \item organizácia neposkytne žiadnu nepriamu štátnu pomoc v zmysle špecifických podmienok výzvy;
+  \item organizácia nie je daňovým dlžníkom;
+  \item organizácia nie je dlžníkom poistného na sociálnom poistení (dôchodkovom, nemocenskom, garančnom a úrazovom poistení, poistení v nezamestnanosti, poistení do rezervného fondu solidarity) a dlžníkom príspevkov na starobné dôchodkové sporenie;
+  \item organizácia nie je dlžníkom poistného na zdravotnom poistení (za každú zdravotnú poisťovňu);
+  \item organizácia nie je v likvidácii;
+  \item voči organizácii nie je vedený výkon rozhodnutia;
+  \item voči organizácii nebolo začaté konkurzné/reštrukturalizačné konanie;
+  \item na majetok organizácie nie je vyhlásený konkurz;
+  \item voči organizácii nebol zamietnutý návrh na vyhlásenie konkurzu pre nedostatok majetku;
+  \item organizácia neporušila zákaz nelegálnej práce a nelegálneho zamestnávania podľa osobitého predpisu;
+  \item organizácia má vysporiadané finančné vzťahy so štátnym rozpočtom;
+  \item organizácia bude súčinná pri poskytovaní dokladov, ktoré preukazujú splnenie podmienok na poskytnutie dotácie v zmysle zákona č.~523/2004 Z.~z.;
+  \item som si vedomý/á povinnosti poskytnutia informácií o výskume a vývoji, na ktorý boli poskytnuté finančné prostriedky zo štátneho rozpočtu, za účelom zverejnenia v súlade s platnou legislatívou SR;
+  \item som si vedomý/á povinnosti zverejnenia informácií o technickej infraštruktúre výskumu a vývoja na centrálnom informačnom portáli;
+  \item som si vedomý/á skutočnosti, že APVV zverejní na webovej stránke \url{www.apvv.sk} rozhodnutie o žiadostiach odporučených aj neodporučených orgánom APVV na financovanie;
+  \item som si vedomý/á povinnosti popularizovať výsledky riešenia projektu s cieľom zrozumiteľným spôsobom informovať verejnosť o prínosoch výsledkov a výstupov výskumu a vývoja;
+  \item predložený návrh projektu po svojej obsahovej stránke nebude financovaný z národných zdrojov iných grantových schém ako z príslušnej grantovej schémy APVV.
+\end{itemize}
+
+Ako štatutárny zástupca svojím podpisom zodpovedám za správnosť a pravdivosť údajov uvedených v tejto elektronickej žiadosti. V prípade vyzvania zo strany APVV sa zaväzujem nahradiť toto čestné vyhlásenie aktuálnymi potvrdeniami príslušných úradov. Som si vedomý/á, že v prípade zistenia, že údaje uvedené v predmetnom vyhlásení nie sú pravdivé, žiadosť bude vyradená alebo zmluva o poskytnutí prostriedkov nebude podpísaná, prípadne dôjde k odstúpeniu od zmluvy.
+
+\vspace{1.2em}
+{\footnotesize
+\begin{tabularx}{\textwidth}{@{}p{7.2cm} X@{}}
+\toprule
+\textbf{Názov žiadateľskej organizácie} & \applicant \\
+\textbf{Meno štatutárneho zástupcu (I)} & \statutory \\
+\textbf{V zastúpení (uveďte čitateľne meno)} & --- \\
+\textbf{Podpis štatutárneho zástupcu} & \dotfill \\
+\textbf{Miesto} & Bratislava \\
+\textbf{Dátum} & \projectDate \\
+\bottomrule
+\end{tabularx}
+}
+
+\end{document}

@@ -3,8 +3,8 @@
 % Prepínač: \dvojstlpectrue = dvojstĺpcový dokument (len pre cvičenie c04),
 %           \dvojstlpecfalse = bežný jednostĺpcový článok.
 \newif\ifdvojstlpec
-\dvojstlpectrue
-%\dvojstlpecfalse
+%\dvojstlpectrue
+\dvojstlpecfalse
 
 \ifdvojstlpec
   \documentclass[10pt,twocolumn,twoside,slovak,a4paper]{article}
@@ -22,18 +22,25 @@
 \usepackage{url}
 \usepackage{hyperref}
 \usepackage{cite}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{microtype}
+\setlength{\emergencystretch}{2em}
 
 % Názov súboru s logom FIIT (slovenská verzia) v priečinku img/
 \newcommand{\logofile}{STU-FIIT-nfv.pdf}
 
 \pagestyle{headings}
 
-\title{Detekcia falošných online recenzií na základe jazykových a behaviorálnych príznakov\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak. rok 2026/27, vedenie: Meno Priezvisko}} % TODO: doplniť meno cvičiaceho
+\title{Detekcia falošných online recenzií na základe jazykových a behaviorálnych príznakov\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak. rok 2026/27, vedenie: Ing. Ivan Kapustík}}
 
-\author{Matvii Nosenko, Volodymyr Nedoluha, Danylo Nikolenko, Rostyslav Mykytiuk\\[2pt]
+\author{Matvii Nosenko, Volodymyr Nedoluha\\[2pt]
+	Danylo Nikolenko, Rostyslav Mykytiuk\\[2pt]
 	{\small Slovenská technická univerzita v Bratislave}\\
 	{\small Fakulta informatiky a informačných technológií}\\
-	{\small \texttt{xnosenko@stuba.sk, xnedoluha@stuba.sk, xnikolenkod@stuba.sk, xmykytiuk@stuba.sk}}
+	{\small \texttt{xnosenko@stuba.sk, xnedoluha@stuba.sk}}\\
+	{\small \texttt{xnikolenkod@stuba.sk, xmykytiuk@stuba.sk}}
 	}
 
 \date{\small \today}
@@ -43,72 +50,79 @@
 \maketitle
 
 \begin{abstract}
-Online recenzie výrazne ovplyvňujú rozhodovanie spotrebiteľov, no ich dôveryhodnosť narúšajú falošné recenzie generované firmami, platenými recenzentmi či automatizovanými nástrojmi. Tento článok prináša prehľad súčasných metód detekcie falošných recenzií so zameraním na porovnanie jazykových (textových) a behaviorálnych (na správaní recenzenta založených) príznakov.
+Online recenzie výrazne ovplyvňujú rozhodovanie spotrebiteľov, no ich dôveryhodnosť narúšajú falošné recenzie vytvárané firmami, platenými recenzentmi, konkurenciou či automatizovanými nástrojmi. Tento prehľadový článok porovnáva jazykové a behaviorálne príznaky používané na ich detekciu, venuje sa hybridným a grafovým modelom, recenziám generovaným veľkými jazykovými modelmi a požiadavke na vysvetliteľnosť. Na základe prehľadu identifikujeme otvorené problémy, najmä nedostatok slovenských a českých dát, studený štart a posun distribúcie, a načrtávame smerovanie ďalšieho výskumu.
 \end{abstract}
 
 
 \section{Úvod}
 
 % Logo FIIT STU obtekané textom (bez popisu, aby nezaberalo číslo obrázka)
-\begin{wrapfigure}{r}{0.36\columnwidth}
+\begin{wrapfigure}{r}{0.22\textwidth}
   \vspace{-6pt}
   \centering
-  \includegraphics[width=0.34\columnwidth]{\logofile}
+  \includegraphics[width=0.20\textwidth]{\logofile}
   \vspace{-8pt}
 \end{wrapfigure}
-Tento článok vznikol v rámci semestrálneho projektu v predmete Metódy inžinierskej práce na Fakulte informatiky a informačných technológií Slovenskej technickej univerzity v Bratislave (FIIT STU). Súčasný rozmach elektronického obchodu priniesol výrazný nárast vplyvu používateľských recenzií na spotrebiteľské správanie. Spotrebitelia sa pri nákupe tovarov a služieb spoliehajú na skúsenosti iných zákazníkov, čo vytvára motiváciu pre nekalé subjekty manipulovať trh falošnými hodnoteniami. Detekcia takýchto recenzií predstavuje dôležitú výzvu prepájajúcu spracovanie prirodzeného jazyka a analýzu používateľského správania.
+Online recenzie sa stali jedným z najvplyvnejších signálov pri nákupe tovarov a služieb. Ovplyvňujú predajnosť produktov, reputáciu podnikov a rozhodovanie spotrebiteľov, a preto vytvárajú silnú motiváciu manipulovať recenzným priestorom: objednávať pozitívne hodnotenia, znevažovať konkurenciu alebo hromadne vytvárať účty, ktoré sa navzájom podporujú. Falošné recenzie tak poškodzujú spotrebiteľov, znižujú dôveryhodnosť platforiem a vytvárajú nekalú konkurenčnú výhodu.
+
+S rozvojom veľkých jazykových modelov (LLM) sa výrazne znížil náklad na vytvorenie plynulého a štylisticky presvedčivého textu. Tradičné detektory založené na povrchových lexikálnych znakoch strácajú spoľahlivosť a čoraz väčší význam nadobúdajú behaviorálne a relačné signály, ktoré opisujú, \emph{ako} a \emph{kedy} recenzia vznikla. Zároveň rastú požiadavky na vysvetliteľnosť: moderátor platformy musí vedieť rozhodnutie o označení recenzie obhájiť, čo súvisí aj s reguláciou zavádzajúcich recenzií v EÚ.
+
+V článku si kladieme štyri výskumné otázky: (RQ1)~ktoré jazykové príznaky sú spojené s falošnými recenziami; (RQ2)~ktoré behaviorálne a grafové príznaky zachytávajú koordinované podvody; (RQ3)~ako tieto skupiny kombinovať; a (RQ4)~ktoré problémy zostávajú otvorené v ére generatívnych modelov. Pri spracovaní témy nás primárne usmernila prehľadová práca \cite{crawford2015}; za zakladajúcu prácu oblasti považujeme \cite{jindal2008}. Prínos článku je v spojení jazykového a behaviorálneho pohľadu a vo vymedzení medzery, na ktorú nadväzuje náš ďalší výskum. Časť~\ref{suvisiace} predstavuje súvisiace práce a taxonómiu, časti~\ref{jazykove} a~\ref{behavioralne} porovnávajú dve skupiny príznakov, časť~\ref{hybridne} sa venuje hybridným prístupom, časť~\ref{porovnanie} ich porovnáva a formuluje otvorené problémy, časť~\ref{navrh} načrtáva naše smerovanie a časť~\ref{zaver} uzatvára článok.
 
 
 % Dva diagramy vedľa seba cez obidva stĺpce (figure* v dvojstĺpcovom režime).
-% Široké plávajúce obrázky (figure*) sa v dvojstĺpcovom režime umiestnia až na vrch NASLEDUJÚCEJ strany,
-% preto je tento blok v zdrojáku zámerne už na 1. strane (v Úvode). Ak zmeníte rozsah textu, posuňte ho.
 \begin{figure*}[!t]
   \centering
   \begin{minipage}[b]{0.42\textwidth}
     \centering
-    \includegraphics[width=\linewidth, height=0.32\textheight, keepaspectratio]{diagram1.pdf}
+    \includegraphics[width=\linewidth, height=0.20\textheight, keepaspectratio]{diagram1.pdf}
     \caption{Proces detekcie recenzií}\label{fig:proces}
   \end{minipage}\hfill
   \begin{minipage}[b]{0.5\textwidth}
     \centering
-    \includegraphics[width=\linewidth, height=0.32\textheight, keepaspectratio]{diagram2.pdf}
+    \includegraphics[width=\linewidth, height=0.20\textheight, keepaspectratio]{diagram2.pdf}
     \caption{Architektúra extrakcie príznakov}\label{fig:architektura}
   \end{minipage}
 \end{figure*}
 
 
-\section{Súvisiace práce} \label{suvisiace}
+\section{Súvisiace práce a taxonómia} \label{suvisiace}
 
-Priekopnícku prácu v oblasti odhaľovania falošných recenzií publikovali Jindal a Liu~\cite{jindal2008}, ktorí kategorizovali recenzný spam a identifikovali duplicitné texty ako primárny indikátor manipulácie. Následne Ott a kol.~\cite{ott2011} vytvorili prvý štandardizovaný zlatý dataset klamlivých recenzií (\emph{deceptive opinion spam}) a ukázali, že metódy strojového učenia využívajúce n-gramy a psycholingvistické lexikóny dosahujú výrazne vyššiu úspešnosť než ľudskí posudzovatelia.
+Jindal a Liu~\cite{jindal2008} ako prví systematicky kategorizovali recenzný spam a rozlíšili nepravdivé recenzie, recenzie propagujúce iba značku a recenzie, ktoré vôbec nie sú recenziami produktu. Ott a kol.~\cite{ott2011} vytvorili prvý štandardizovaný dataset klamlivých recenzií a ukázali, že n-gramy a psycholingvistické lexikóny prekonávajú ľudských posudzovateľov; zároveň upozornili, že pri autenticky pôsobiacich textoch sa klasifikátor môže učiť idiosynkrázie konkrétnych autorov. Luca a Zervas~\cite{luca2016} na dátach z Yelpu dokumentovali, že podniky s horšou reputáciou častejšie objednávajú falošné pozitívne recenzie. Mukherjee a kol.~\cite{mukherjee2013} ukázali, že behaviorálne príznaky môžu byť informatívnejšie než samotný text.
 
-Ekonomické aspekty a motivácie komerčných subjektov analyzovali Luca a Zervas~\cite{luca2016}, pričom poukázali na to, že reštaurácie a podniky s horšou reputáciou majú signifikantne vyššiu tendenciu publikovať falošné pozitívne recenzie. Mukherjee a kol.~\cite{mukherjee2013} sa zamerali na reálny filtrovací mechanizmus platformy Yelp a ukázali, že na reálnych dátach dosahujú behaviorálne príznaky pri odhaľovaní falošných recenzií lepšie výsledky než samotné jazykové príznaky (n-gramy). % TODO: overiť formuláciu podľa originálneho článku
+Samostatnú líniu predstavujú práce o koordinovaných skupinách a recenzných sieťach. Mukherjee a kol.~\cite{mukherjee2012} odhaľovali falošné recenzentské skupiny podľa spoločného správania a synchronizovaného publikovania. Rayana a Akoglu~\cite{rayana2015} spojili recenzie, recenzentov a produkty do jednej siete a využili šírenie podozrenia medzi prepojenými entitami.
 
-% TODO: doplniť ďalšie zdroje (minimálne 8 spolu s primárnym zdrojom) do literatura.bib
+Prehľadové práce \cite{crawford2015} a \cite{heydari2015} zjednotili terminológiu a rozdelili prístupy podľa typu príznakov a úrovne rozhodovania. Barbado a kol.~\cite{barbado2019} overili aplikačný rozmer na doméne spotrebnej elektroniky a Li a kol.~\cite{li2014} ukázali, že existujú relatívne univerzálne, ľudsky interpretovateľné pravidlá prekračujúce hranice datasetu.
+
+Recenzný spam možno deliť podľa zámeru (falošne pozitívny, falošne negatívny), pôvodcu (ľudský, platený, konkurenčný, automatizovaný), úrovne (recenzia, recenzent, produkt, skupina) a času (jednorazový, koordinovaný). Rôzne typy podvodov zanechávajú rôzne stopy: jazykové príznaky sú silnejšie pri nešikovne vytvorených textoch, behaviorálne a grafové pri koordinovaných kampaniach. Zhao a kol.~\cite{zhao2025} napokon ukázali, že AI-generované recenzie sú plynulejšie a štylisticky konzistentnejšie než ľudské, čo je hlavný dôvod, prečo sa výskum obracia k hybridným prístupom.
 
 
 \section{Jazykové príznaky} \label{jazykove}
 
-Jazykové príznaky vychádzajú z predpokladu, že autori vymyslených recenzií používajú odlišné štylistické a syntaktické vzory než reálni zákazníci. Medzi kľúčové metriky patrí:
+Jazykové príznaky vychádzajú z predpokladu, že autori vymyslených recenzií používajú odlišné štylistické, syntaktické a sémantické vzory než reálni zákazníci. Medzi kľúčové metriky patria:
+
 \begin{itemize}
-  \item \textbf{Lexikálna bohatosť:} Pomer počtu unikátnych slov k celkovému počtu slov (Type-Token Ratio) býva pri falošných recenziách nižší v dôsledku obmedzenej slovnej zásoby. % TODO: doplniť zdroj
-  \item \textbf{Distribúcia slovných druhov:} Ott a kol.~\cite{ott2011} pozorovali, že klamlivé recenzie obsahujú pomerne viac slovies, príslovok a zámen, zatiaľ čo pravdivé recenzie viac podstatných a prídavných mien a predložiek. % TODO: overiť podľa originálneho článku
-  \item \textbf{Polarita a subjektivita:} Extrémne pozitívne alebo negatívne sentimenty s nízkou mierou vecnej argumentácie. % TODO: doplniť zdroj
+  \item \textbf{Lexikálna bohatosť:} Type-Token Ratio, priemerná dĺžka slova a slovná zásoba. Nižšia lexikálna rozmanitosť sa pri falošných recenziách uvádza často, výsledky však závisia od dĺžky textu a domény, preto treba TTR normalizovať \cite{ott2011,heydari2015}.
+  \item \textbf{Distribúcia slovných druhov a syntax:} klamlivé recenzie obsahujú pomerne viac slovies, prísloviek a zámen, pravdivé viac podstatných a prídavných mien a predložiek \cite{ott2011}. Doplnkovými znakmi sú dĺžka viet, interpunkcia a opakovanie šablón.
+  \item \textbf{Sémantika a sentiment:} polarita, subjektivita, extrémnosť hodnotenia a miera konkrétnych, overiteľných detailov. Extrémne hodnotenia s malým množstvom vecných argumentov patria medzi rizikovejšie \cite{li2014}.
+  \item \textbf{Neurónové reprezentácie:} jemne doladené transformery, napr. BERT \cite{devlin2019}, zachytávajú kontextové vzory neviditeľné pre n-gramy; pri generovaných textoch sa dopĺňa perplexita a miera „hladkosti“ \cite{zhao2025}.
 \end{itemize}
 
-Na obr.~\ref{fig:proces} a~\ref{fig:architektura} sú znázornené dva diagramy vytvorené v nástroji UMLet/UMLetino: vľavo proces detekcie falošných recenzií (obr.~\ref{fig:proces}) a vpravo architektúra tried extraktora príznakov v UML notácii (obr.~\ref{fig:architektura}).
-
-% Voliteľné: tretí, samostatný diagram cez obidva stĺpce (zadanie 4).
-% Odkomentujte po nakreslení diagramu v UMLet a exporte do img/diagram3.pdf.
-%\begin{figure*}[!t]
-%  \centering
-%  \includegraphics[width=0.7\textwidth]{diagram3.pdf}
-%  \caption{Celková architektúra navrhovaného systému}\label{fig:celkovy}
-%\end{figure*}
+Jazykové príznaky nie sú univerzálne: závisia od jazyka, domény, dĺžky recenzie a pôvodcu textu. Pri ľuďmi písaných recenziách sa detektory učia idiosynkrázie autorov, pri LLM-generovaných textoch zase vlastnosti konkrétneho modelu, čo vedie k slabej generalizácii a rýchlemu zastarávaniu. Sú však lacné, dostupné aj pri novom recenzentovi a interpretovateľné, preto zostávajú dôležitou súčasťou hybridných riešení. Na obr.~\ref{fig:proces} a~\ref{fig:architektura} sú znázornené diagramy vytvorené v nástroji UMLet/UMLetino: proces detekcie a architektúra tried extraktora príznakov.
 
 
 \section{Behaviorálne príznaky} \label{behavioralne}
 
-Behaviorálne príznaky charakterizujú aktivitu používateľov v čase a ich anomálie voči bežnému správaniu. Na reprezentáciu kombinácie jazykových a behaviorálnych metrík pre vzorky recenzií slúži matica príznakov $\mathbf{X}_{5\times 4}$ v rovnici~(\ref{eq:matica}), kde riadky zodpovedajú jednotlivým recenziám a stĺpce predstavujú ilustračné hodnoty sentimentu (v intervale $\langle -1, 1\rangle$), lexikálnej diverzity, frekvencie publikovania (počet recenzií za mesiac) a odchýlky hodnotenia od priemeru:
+Behaviorálne príznaky sledujú, ako sa recenzent a platforma správajú v čase. Ide o signály, ktoré podvodník napodobňuje ťažšie, pretože si vyžadujú históriu účtu, kontext produktu alebo vzťahy medzi entitami:
+
+\begin{itemize}
+  \item \textbf{Recenzent:} vek účtu, počet recenzií, pomer recenzií k nákupom, overený nákup, kompletnosť profilu a podiel extrémnych hodnotení.
+  \item \textbf{Recenzia a produkt:} dĺžka, čas publikovania, duplicitný text, odchýlka od priemeru produktu a náhle zmeny priemerného hodnotenia.
+  \item \textbf{Čas:} burstiness, periodicita, synchronizácia viacerých účtov a časový posun voči uvedeniu produktu na trh.
+  \item \textbf{Graf a vzťahy:} bipartitný graf recenzent--produkt, ko-recenzné skupiny a šírenie podozrenia v sieti \cite{mukherjee2012,rayana2015}.
+\end{itemize}
+
+Na reprezentáciu kombinácie jazykových a behaviorálnych metrík slúži matica príznakov $\mathbf{X}_{5\times 4}$ v rovnici~(\ref{eq:matica}), kde riadky zodpovedajú recenziám a stĺpce ilustračným hodnotám sentimentu, lexikálnej diverzity, frekvencie publikovania a odchýlky hodnotenia od priemeru:
 \begin{equation}
 \mathbf{X}_{5\times 4} =
 \begin{pmatrix}
@@ -121,30 +135,65 @@ Behaviorálne príznaky charakterizujú aktivitu používateľov v čase a ich a
 \label{eq:matica}
 \end{equation}
 
-Pre modelovanie vývoja reputácie recenzenta $u$ v čase po $n$ publikovaných príspevkoch využívame postupnosť $R_n(u)$. Vzorec~(\ref{eq:postupnost}) vyjadruje výpočet tejto postupnosti s rozvojom, ktorý presahuje šírku riadku, preto je sadzaný pomocou viacriadkového prostredia \texttt{multline}:
+Dôveryhodnosť recenzenta $u$ po $n$ recenziách modelujeme exponenciálnym vyhladzovaním:
 \begin{multline}
-R_n(u) = R_0 + \sum_{k=1}^{n} \left( \alpha \cdot \frac{k^2 + 2k + 1}{k!} + \beta \cdot \lambda^{k-1} \right) \\
-= R_0 + \left( \alpha \frac{4}{1!} + \beta \right) + \left( \alpha \frac{9}{2!} + \beta\lambda \right) + \left( \alpha \frac{16}{3!} + \beta\lambda^{2} \right) \\
-+ \left( \alpha \frac{25}{4!} + \beta\lambda^{3} \right) + \cdots + \left( \alpha \frac{n^2 + 2n + 1}{n!} + \beta\lambda^{n-1} \right)
+T_n(u) = (1-\alpha)^n T_0(u)
++ \alpha(1-\alpha)^{n-1}\phi\bigl(r_1(u)\bigr) + \cdots \\
++ \alpha(1-\alpha)\phi\bigl(r_{n-1}(u)\bigr) + \alpha\phi\bigl(r_n(u)\bigr),
 \label{eq:postupnost}
 \end{multline}
+kde $\alpha \in (0,1)$ je miera učenia a $\phi(r_k(u)) \in \langle 0,1\rangle$ je normalizovaný signál autentickosti $k$-tej recenzie. Model je jednoduchý, interpretovateľný a umožňuje priebežnú aktualizáciu bez prepočítavania celej histórie.
+
+Behaviorálne príznaky majú dve obmedzenia: \emph{studený štart} pri nových recenzentoch a dostupnosť citlivých dát. Platformy často nezverejňujú históriu používateľov a spracovanie osobných údajov podlieha GDPR; riešením je agregácia, anonymizácia a používanie verejných datasetov či spolupráca s platformami.
 
 
-\section{Porovnanie prístupov} \label{porovnanie}
+\section{Hybridné a moderné prístupy} \label{hybridne}
 
-Čisto jazykové prístupy môžu byť menej spoľahlivé pri sofistikovaných textoch generovaných modernými veľkými jazykovými modelmi (LLM), zatiaľ čo behaviorálne analýzy sú voči štylistickým modifikáciám odolnejšie. % TODO: doplniť zdroj k tvrdeniu o LLM
-Na druhej strane, behaviorálne metriky vyžadujú dostatočnú históriu používateľského účtu, čo limituje ich použitie pri nových recenzentoch (problém studeného štartu). Preto sa ako perspektívny javí hybridný prístup kombinujúci obe skupiny príznakov.
+Hybridné prístupy kombinujú obe skupiny na úrovni príznakov (early fusion), rozhodnutí (late fusion) alebo spoločného modelu. V praxi sa osvedčili gradientové boosting stromy, ansámble a grafové neurónové siete, ktoré prirodzene spracúvajú vzťahy medzi recenzentmi, recenziami a produktmi \cite{rayana2015}. Heterogénne grafy dokážu šíriť podozrenie z podozrivých účtov na susedov a odhaliť kampane neviditeľné na úrovni jednotlivej recenzie; výzvou zostáva dynamika grafu, škálovateľnosť a vysvetliteľnosť.
 
-% Voliteľné: odkaz na tretí diagram, ak ho odkomentujete vyššie
-%Na obr.~\ref{fig:celkovy} je znázornený celkový diagram navrhovanej architektúry systému.
+Vysvetliteľnosť je pri nasadení kľúčová: moderátor musí vedieť, prečo bola recenzia označená, aby rozhodnutie obhájil a nepoškodzoval legitímnych používateľov. Preto sa popri presnosti hodnotia atribúcie príznakov (SHAP~\cite{lundberg2017}, LIME), pozornosť modelu a proti-faktuálne vysvetlenia. V našom poňatí je vysvetliteľnosť rovnocenným cieľom, nie doplnkovou funkcionalitou.
+
+Osobitnú výzvu predstavujú recenzie generované LLM. Sú plynulé a štylisticky konzistentné, takže lexikálne a štylometrické príznaky strácajú silu \cite{zhao2025}. Behaviorálne signály zostávajú účinné, ale aj tie možno obchádzať farmárskymi účtami. Výskum sa preto uberá k detekcii generovaného textu, adaptívnemu učeniu a adversariálnemu testovaniu. Hodnotenie si vyžaduje časové alebo doménové rozdelenie dát, sledovanie F1, AUROC, miery falošných pozitív pri fixnom zachytení a kalibrácie.
+
+
+\section{Porovnanie prístupov a otvorené problémy} \label{porovnanie}
+
+Tabuľka~\ref{tab:porovnanie} zhrňuje hlavné skupiny prístupov. Jazykové metódy sú lacné a dostupné, ale krehké voči LLM a zmene domény. Behaviorálne metódy sú odolnejšie voči štylistickým úpravám, vyžadujú však históriu a citlivé dáta. Grafové metódy najlepšie zachytávajú koordinované skupiny, no sú náročné na dáta a vysvetlenie. Hybridné riešenia dosahujú najlepší kompromis, ale zvyšujú zložitosť systému.
+
+\begin{table}[!t]
+\centering
+\caption{Porovnanie skupín príznakov a prístupov k detekcii falošných recenzií}
+\label{tab:porovnanie}
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}p{2.1cm} X X X@{}}
+\toprule
+Prístup & Typické príznaky & Silné stránky & Obmedzenia \\
+\midrule
+Jazykový & n-gramy, TTR, slovné druhy, LIWC, sentiment, perplexita & dostupný aj pri novom recenzentovi; interpretovateľný; lacný & závislý od jazyka a domény; zlyháva pri LLM \\
+Behaviorálny & vek účtu, frekvencia, burstiness, odchýlka ratingu & odolný voči štylistickým úpravám; zachytáva koordináciu & studený štart; GDPR a dostupnosť dát \\
+Grafový & bipartitné grafy, ko-recenzné skupiny, šírenie podozrenia & odhaľuje skupiny a kampane & náročný na dáta a výpočet; horšia vysvetliteľnosť \\
+Hybridný & spojenie textových, behaviorálnych a grafových príznakov & najlepšia presnosť a robustnosť & zložitosť; riziko preučenia; náročná údržba \\
+LLM-orientovaný & detekcia generovaného textu, perplexita, adversariálne testovanie & reaguje na novú hrozbu & rýchly vývoj modelov; neistá generalizácia \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Otvorených problémov zostáva niekoľko: nedostatok dát pre slovenský a český jazyk, studený štart nových recenzentov, posun distribúcie (\emph{concept drift}), adversariálne prispôsobovanie a spravodlivosť modelov. Práve z nich vyplýva medzera, na ktorú sa zameriavame: chýba otvorený slovensko-anglický dataset, systematické porovnanie jazykových a behaviorálnych príznakov v podmienkach LLM a prakticky použiteľný hybridný detektor s vysvetliteľnými výstupmi.
+
+
+\section{Navrhovaný prístup} \label{navrh}
+
+Navrhujeme modulárny hybridný detektor v štyroch vrstvách: zber a anotácia dát, extrakcia jazykových a behaviorálnych príznakov, hybridný klasifikátor doplnený o grafové príznaky a vrstva vysvetlenia pre moderátora. Ciele sú merateľné: anotovaný dataset s minimálne 15\,000 recenziami a zhodou $\kappa \geq 0{,}7$; F1 najmenej $0{,}85$ v rámci domény a $0{,}75$ pri prenose na novú doménu; prekonanie najlepšieho samostatného jazykového aj behaviorálneho modelu; prototyp API s latenciou do 200\,ms a vysvetlením top-$k$ príznakov. Súčasťou je pilotné overenie s prevádzkovateľmi platforiem a vyhodnotenie použiteľnosti z pohľadu moderátorov.
 
 
 \section{Záver} \label{zaver}
 
-V tejto predbežnej verzii článku sme predstavili štruktúru riešenia detekcie falošných recenzií so zameraním na synergiu textových a behaviorálnych atribútov. V nadväzujúcej fáze projektu sa zameriame na experimentálne vyhodnotenie klasifikátorov na reálnych dátach z portálov Yelp a Amazon a implementáciu hybridného modelu.
+Článok porovnal jazykové, behaviorálne, grafové a hybridné prístupy k detekcii falošných recenzií. Jazykové príznaky sú užitočné pri lacnej prvotnej filtrácii, behaviorálne a grafové odhaľujú koordinované kampane a sú odolnejšie voči štylistickým úpravám. V ére LLM sa ťažisko presúva k hybridným riešeniam s vysvetliteľnými výstupmi. Otvorené zostávajú otázky slovenských a českých dát, studeného štartu, posunu distribúcie a adversariálneho prispôsobovania; na ne sa zameriava náš ďalší výskum.
 
 
+{\small
 \bibliographystyle{unsrt}
 \bibliography{literatura}
+}
 
 \end{document}
