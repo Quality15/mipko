@@ -33,18 +33,19 @@ Deadline predbežnej verzie: **01.11.2026 23:59**, odovzdanie v AIS (termín ove
 
 - [ ] **Akronym FAKERADAR** — v schválenom zameraní akronymu nebolo; v `zameranie.tex` a `projekt-data.tex` je náš návrh. Potvrdiť alebo nahradiť.
 - [ ] **Anglický názov** — v schválenom zameraní nebol; je náš preklad. Potvrdiť alebo nahradiť.
-- [ ] **Či Ing. Kapustík môže byť zodpovedným riešiteľom (PI)** — zatiaľ je uvedený na žiadosť študenta, ale treba jeho súhlas/potvrdenie.
-- [ ] **Základné údaje PI:** telefón, ORCID a prípadné ďalšie vedecké ID, či je mladým pracovníkom (v aktuálnom návrhu „nie“), prípadné expertízy a chránené aplikačné výstupy.
-- [ ] **CV PI pre VV-F:** najviac 5 dôležitých výstupov za posledných 5 rokov; najviac 3 projekty za posledných 5 rokov (názov, grantová schéma, roky, rozpočet, jeho rola); expertízy a význam výstupov. Zatiaľ sú v tabuľkách „doplniť“ — nič nevymýšľať.
-- [ ] **Riešitelia VV-A3:** skontrolovať, kto má byť uvedený; doplniť dátumy narodenia a počet hodín/rok (ak sú podľa zadania skutočne potrebné).
+- [x] **Odpovede Ing. Kapustíka (30.10.2026):** ID vedeckej databázy sa nevypĺňa; expertízy (08) a chránené výstupy (09) sa môžu vynechať (odstránené z VV-A4); projekty v VV-A4 07 — ľubovoľné, najlepšie tie, ktoré viedol; VV-F — najviac 5 výstupov a 3 projekty, zoradené od najvýznamnejšieho.
+- [ ] **Telefón PI** (VV-A4, 03) a **projekty PI** (VV-A4, 07 — názvy, schémy, roky, rozpočty, rola) — doplniť z CV alebo od Ing. Kapustíka.
+- [ ] **VV-F §1.6 tabuľky:** 5 výstupov a 3 projekty Ing. Kapustíka — stále „doplniť“ (odpoveď na štruktúru už je).
+- [ ] **Súhlas Ing. Kapustíka byť zodpovedným riešiteľom** — v jeho odpovedi to explicitne nebolo; potvrdiť priamo.
+- [ ] **Riešitelia VV-A3:** dátumy narodenia všetkých 5 členov (povinné, stále „doplniť“). Hodiny: študenti 100 h/rok (podľa Kapustíka); PI 600 h — overiť.
 - [ ] **Modelové parametre projektu:** potvrdiť alebo upraviť začiatok/koniec 01/2027–12/2029, TRL 3→6, rozpočet 300 000 EUR (APVV 268 000 + spolufinancovanie 32 000), cieľ datasetu 15 000, F1 ciele, pilotní partneri/odberatelia.
 - [ ] Skontrolovať všetky predpoklady VV-F (napr. výpočtová infraštruktúra, zamýšľaný dataset, plánovaný pilot) s tímom, aby nevyzerali ako už potvrdené fakty.
 
 ### Kam vložiť odpovede
 
 - `projekt-data.tex`: `\projectAcronym`, `\projectTitleEN`, `\projectId` (teraz „Zatiaľ nepridelené“), dátumy/rozpočet, `\piName`, `\piEmail`, `\applicantPhone` a ostatné spoločné údaje.
-- `ziadost_VV-A-E.tex`: VV-A3 tabuľka (dátum narodenia, hodiny), VV-A4 polia 02–09 a čestné vyhlásenie PI.
-- `vv-f.tex`: Excelentnosť §1.6 — tabulka max. 5 výstupov, tabuľka max. 3 projektov; doplniť expertné výsledky a potvrdiť opis kompetencií PI/tímu.
+- `ziadost_VV-A-E.tex`: VV-A3 tabuľka (dátum narodenia; hodiny PI), VV-A4 polia 01–07 (telefón, projekty) a čestné vyhlásenie PI.
+- `vv-f.tex`: Excelentnosť §1.6 — tabuľka max. 5 výstupov a max. 3 projektov (zoradené od najvýznamnejšieho); potvrdiť opis kompetencií PI/tímu.
 - `zameranie.tex`: návodne zobrazuje odvodené anglické pomenovanie a akronym; po potvrdení zmeniť spoločné hodnoty v `projekt-data.tex` a odstrániť poznámky „návrh“.
 
 ## C. Pozor pred odovzdaním
