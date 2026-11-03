@@ -1,0 +1,61 @@
+% ============================================================
+%  Metódy inžinierskej práce — Cvičenie 6, úloha 3 (prez-themes.tex)
+%
+%  Šablóna na experimentovanie s témou (\usetheme) a farebnosťou
+%  (\usecolortheme) prezentácie. Samotný súbor sa neprekladá priamo:
+%  riadok so značkou nižšie nahrádza skript build-themes.sh
+%  konkrétnou témou a farebnosťou; ten potom vygeneruje a preloží
+%  jednotlivé varianty do priečinka themes/.
+%
+%  Spustenie:  ./build-themes.sh
+% ============================================================
+\documentclass{beamer}
+
+@@THMESETTINGS@@
+
+\setbeamercovered{transparent}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[slovak,shorthands=off]{babel}
+
+\title[Ukážka témy]{Ukážka témy a farebnosti beamer}
+\subtitle{\vspace{2mm}Metódy inžinierskej práce 2026/27}
+\author[Matvii Nosenko a kol.]{Matvii Nosenko, Volodymyr Nedoluha\\[1mm]Danylo Nikolenko, Rostyslav Mykytiuk}
+\institute[FIIT STU]{Fakulta informatiky a informačných technológií\\Slovenská technická univerzita v Bratislave}
+\date{\footnotesize \today}
+
+\begin{document}
+
+\begin{frame}[fragile=singleslide]
+\titlepage
+\end{frame}
+
+\begin{frame}[fragile=singleslide]\frametitle{Prehľad}
+\tableofcontents
+\end{frame}
+
+\section{Príznaky}
+\begin{frame}[fragile=singleslide]\frametitle{Odrážky 1. a 2. úrovne}
+\begin{itemize}
+\item Prvá úroveň odrážok
+	\begin{itemize}
+	\item Druhá úroveň
+	\item Ďalšia druhá úroveň
+	\end{itemize}
+\item Pokračovanie prvej úrovne
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile=singleslide]\frametitle{Ukážka bloku a textu}
+Vplyv na čitateľnosť: nadpisy, päty a farebnosť blokov.
+\begin{block}{Blok}
+Text v \texttt{block} rámiku.
+\end{block}
+\begin{alertblock}{Upozornenie}
+Zdôraznený text v \texttt{alertblock}.
+\end{alertblock}
+\end{frame}
+
+\end{document}
