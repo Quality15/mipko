@@ -1,3 +1,39 @@
+commit 9c51309474194928079bb7875568097839b02a65
+Author: Matvii <qwerty15092008@gmail.com>
+Date:   Tue Nov 3 14:57:03 2026 +0100
+
+    docs(cv6): poznamky k uloham 6.5-6.7 a plan Jira/GitHub (ulohy 6.1-6.4)
+
+commit 51ecc54f8215005c980c3024de7f068e874bf4d3
+Author: Matvii <qwerty15092008@gmail.com>
+Date:   Tue Nov 3 14:57:03 2026 +0100
+
+    feat(cv6): experimenty s temou a farebnostou beameru (uloha 6.7)
+
+commit 95b9467c102673b241595efebdf78c6e5b11fb05
+Author: Matvii <qwerty15092008@gmail.com>
+Date:   Tue Nov 3 14:57:03 2026 +0100
+
+    feat(cv6): inicialna verzia prezentacie clanku v beamer (uloha 6.6)
+
+commit 982609e8e8522fe1b4329f7815ff070e7cd68465
+Author: Matvii <qwerty15092008@gmail.com>
+Date:   Tue Nov 3 14:57:02 2026 +0100
+
+    feat(cv6): stiahnutie a preklad vzoru prez.tex, porovnanie so vzorom (uloha 6.5)
+
+commit 6672cba2c53c94929fb490dd51b6b1bf685b28e2
+Author: Matvii <qwerty15092008@gmail.com>
+Date:   Tue Nov 3 14:57:02 2026 +0100
+
+    build: ignorovanie beamer pomocnych suborov (.nav, .snm, .vrb)
+
+commit db8f83f1e243781d68c86ed35781f24f75344c8b
+Author: Matvii <qwerty15092008@gmail.com>
+Date:   Tue Nov 3 14:40:34 2026 +0100
+
+    docs(cv5): export git log do git_log.txt (uloha 5.18)
+
 commit 69b5f6872678f674bf25b0aeaeb8e33e23ccd630
 Author: Matvii <qwerty15092008@gmail.com>
 Date:   Tue Nov 3 14:40:29 2026 +0100
