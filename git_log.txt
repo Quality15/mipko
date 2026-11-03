@@ -1,0 +1,101 @@
+commit 69b5f6872678f674bf25b0aeaeb8e33e23ccd630
+Author: Matvii <qwerty15092008@gmail.com>
+Date:   Tue Nov 3 14:40:29 2026 +0100
+
+    docs(cv5): plan Jira/Scrum pre Cvicenie 5, backlog, sprievodny skript a aktualizacia checklistu
+
+commit 46dd08c8eb0d8d094de80d338951b4fb7cdcad1c
+Author: Matvii <qwerty15092008@gmail.com>
+Date:   Tue Nov 3 14:34:02 2026 +0100
+
+    docs: aktualizacia checklistu Cvicenia 4 (stav po uzatvoreni uloh 7 a 9)
+
+commit 8a4ca32564625b5f35f286af4f3b04ed699ab347
+Author: Matvii <qwerty15092008@gmail.com>
+Date:   Tue Nov 3 14:34:02 2026 +0100
+
+    docs(cv4): poznamky k uloham 4.5-4.7,4.9 a Overleaf balik pre round-trip (ulohy 5/6)
+
+commit 8fe747cd15cb4fdcb3713bfa54f4eff14339d23e
+Author: Matvii <qwerty15092008@gmail.com>
+Date:   Tue Nov 3 14:34:02 2026 +0100
+
+    feat(cv4): matica 5x4 a viacriadkovy vzorec v MS Word na porovnanie (uloha 9)
+
+commit 90082b265de8f51b2d8262398a20ddbd02bff156
+Author: Matvii <qwerty15092008@gmail.com>
+Date:   Tue Nov 3 14:34:02 2026 +0100
+
+    feat(cv4): experimenty s vlastnostami obrazkov - velkost, rotacia, pozicia, zarovnanie (uloha 7)
+
+commit 8b3259bed166a8e2e83da199eb64d07ce85f0ef7
+Author: Matvii <qwerty15092008@gmail.com>
+Date:   Tue Nov 3 14:22:05 2026 +0100
+
+    CHECKLIST.md update
+
+commit ab4fe7d649c9095c428054dcc5154d67e24818dd
+Author: Matvii <qwerty15092008@gmail.com>
+Date:   Sat Oct 31 01:00:54 2026 +0100
+
+    some changes
+
+commit 1f79fc7b1159ae74c10a52658350e5c81474f63f
+Author: Matvii <qwerty15092008@gmail.com>
+Date:   Thu Oct 29 21:14:03 2026 +0100
+
+    Predbezna verzia projektu
+
+commit 3e73ffa276915020c3f2c6c23c05fc711157d0f0
+Author: Matvii <qwerty15092008@gmail.com>
+Date:   Tue Oct 20 14:48:20 2026 +0200
+
+    some
+
+commit 84bc8ae9e28437e4049acdfc6259f7c8f860c3ea
+Author: Matvii <qwerty15092008@gmail.com>
+Date:   Tue Oct 20 14:25:03 2026 +0200
+
+    docs(clanok): rozsirenie predbeznej verzie clanku, odborne citacie a zaver (uloha 10)
+
+commit a97732f59afd84308c4bebe564789786eb0c1727
+Author: Matvii <qwerty15092008@gmail.com>
+Date:   Tue Oct 20 14:24:23 2026 +0200
+
+    feat(math): pridanie matice 5x4 a viacriadkoveho vzorca postupnosti cez multline (uloha 9)
+
+commit d421d494842400e53345c2c8ce1181c5150ea423
+Author: Matvii <qwerty15092008@gmail.com>
+Date:   Tue Oct 20 14:24:04 2026 +0200
+
+    feat(logo): pridanie oficialneho loga FIIT STU v slovencine s textovym obtekanim (uloha 8)
+
+commit 71c2df7f0b28bed1c9cbc49b933a436da64abc20
+Author: Matvii <qwerty15092008@gmail.com>
+Date:   Tue Oct 20 14:23:48 2026 +0200
+
+    style(layout): prechodna uprava na dvojstlpcovy format a celostrankovy diagram cez oba stlpce (ulohy 3 a 4)
+
+commit 8191256a713a54d6dcba73b6f3a42e15e5d73128
+Author: Matvii <qwerty15092008@gmail.com>
+Date:   Tue Oct 20 14:23:23 2026 +0200
+
+    docs(diagrams): vytvorenie druheho diagramu v UMLet a vlozenie diagramov vedla seba (uloha 2)
+
+commit 71cec7ac6f46e977e8519667776807a81e7c291c
+Author: Matvii <qwerty15092008@gmail.com>
+Date:   Tue Oct 20 14:22:52 2026 +0200
+
+    build: konfiguracia .gitignore a odstranenie zostavenych artefaktov z repozitara
+
+commit f22a91ace984809080b1f2f10b9eb0165181c387
+Author: Matvii <qwerty15092008@gmail.com>
+Date:   Tue Oct 13 14:48:38 2026 +0200
+
+    Pridané balíky amsmath, wrapfig a priečinok img
+
+commit 4363f6e9fe7d553332e8f1fe1489fd6b5975b2b4
+Author: Matvii <qwerty15092008@gmail.com>
+Date:   Tue Sep 29 15:15:16 2026 +0200
+
+    init commit
