@@ -94,7 +94,7 @@ Samostatnú líniu predstavujú práce o koordinovaných skupinách a recenznýc
 
 Prehľadové práce \cite{crawford2015} a \cite{heydari2015} zjednotili terminológiu a rozdelili prístupy podľa typu príznakov a úrovne rozhodovania. Barbado a kol.~\cite{barbado2019} overili aplikačný rozmer na doméne spotrebnej elektroniky a Li a kol.~\cite{li2014} ukázali, že existujú relatívne univerzálne, ľudsky interpretovateľné pravidlá prekračujúce hranice datasetu.
 
-Recenzný spam možno deliť podľa zámeru (falošne pozitívny, falošne negatívny), pôvodcu (ľudský, platený, konkurenčný, automatizovaný), úrovne (recenzia, recenzent, produkt, skupina) a času (jednorazový, koordinovaný). Rôzne typy podvodov zanechávajú rôzne stopy: jazykové príznaky sú silnejšie pri nešikovne vytvorených textoch, behaviorálne a grafové pri koordinovaných kampaniach. Zhao a kol.~\cite{zhao2025} napokon ukázali, že AI-generované recenzie sú plynulejšie a štylisticky konzistentnejšie než ľudské, čo je hlavný dôvod, prečo sa výskum obracia k hybridným prístupom.
+Recenzný spam možno deliť podľa zámeru (propagácia vlastnej ponuky, poškodenie konkurencie), pôvodcu (ľudský, platený, konkurenčný, automatizovaný), úrovne (recenzia, recenzent, produkt, skupina) a času (jednorazový, koordinovaný). Rôzne typy podvodov zanechávajú rôzne stopy: jazykové príznaky sú silnejšie pri nešikovne vytvorených textoch, behaviorálne a grafové pri koordinovaných kampaniach. Zhao a kol.~\cite{zhao2025} napokon ukázali, že AI-generované recenzie sú plynulejšie a štylisticky konzistentnejšie než ľudské, čo je hlavný dôvod, prečo sa výskum obracia k hybridným prístupom.
 
 
 \section{Jazykové príznaky} \label{jazykove}
@@ -183,12 +183,14 @@ Otvorených problémov zostáva niekoľko: nedostatok dát pre slovenský a čes
 
 \section{Navrhovaný prístup} \label{navrh}
 
-Navrhujeme modulárny hybridný detektor v štyroch vrstvách: zber a anotácia dát, extrakcia jazykových a behaviorálnych príznakov, hybridný klasifikátor doplnený o grafové príznaky a vrstva vysvetlenia pre moderátora. Ciele sú merateľné: anotovaný dataset s minimálne 15\,000 recenziami a zhodou $\kappa \geq 0{,}7$; F1 najmenej $0{,}85$ v rámci domény a $0{,}75$ pri prenose na novú doménu; prekonanie najlepšieho samostatného jazykového aj behaviorálneho modelu; prototyp API s latenciou do 200\,ms a vysvetlením top-$k$ príznakov. Súčasťou je pilotné overenie s prevádzkovateľmi platforiem a vyhodnotenie použiteľnosti z pohľadu moderátorov.
+Navrhujeme modulárny hybridný detektor v štyroch vrstvách: zber a anotácia dát, extrakcia jazykových a behaviorálnych príznakov, hybridný klasifikátor doplnený o grafové príznaky a vrstva vysvetlenia pre moderátora. Predbežné plánovacie ciele sú anotovaný dvojjazyčný dataset s cieľovou veľkosťou 15\,000 recenzií a zhodou anotátorov $\kappa \geq 0{,}7$; počiatočné prahy F1 sú 0,80 pre jazykový model, 0,75 pre behaviorálny/grafový model a 0,85 pre hybridný model v rámci domény, s cieľom 0,75 pri prenose na novú doménu. Tieto hodnoty sú pracovné ciele, nie namerané výsledky: kalibrujú sa po baseline experimentoch. Hybridný model má prekonať samostatné modely v porovnateľnom teste. Latencia API sa bude merať v pilote; cieľový limit sa stanoví po dohode s potenciálnym používateľom. Pilot sa uskutoční s partnerskou platformou, ak sa podarí zabezpečiť prístup, inak sa použije offline test na dostupných dátach. Počet recenzií, prahové hodnoty F1 a rozsah pilotu sú predbežné predpoklady, ktoré sa overia po audite dát a kapacít tímu.
 
 
 \section{Záver} \label{zaver}
 
 Článok porovnal jazykové, behaviorálne, grafové a hybridné prístupy k detekcii falošných recenzií. Jazykové príznaky sú užitočné pri lacnej prvotnej filtrácii, behaviorálne a grafové odhaľujú koordinované kampane a sú odolnejšie voči štylistickým úpravám. V ére LLM sa ťažisko presúva k hybridným riešeniam s vysvetliteľnými výstupmi. Otvorené zostávajú otázky slovenských a českých dát, studeného štartu, posunu distribúcie a adversariálneho prispôsobovania; na ne sa zameriava náš ďalší výskum.
+
+Na výskumné otázky odpovedáme takto. (RQ1) Najčastejšie spájané jazykové príznaky sú lexikálna rozmanitosť (normalizované TTR), distribúcia slovných druhov, extrémnosť sentimentu a štylometrické markery; ich prínos je najväčší pri lacnej prvotnej filtrácii a pri nešikovne vytvorených textoch. (RQ2) Behaviorálne a grafové príznaky zachytávajú koordinované podvody, najmä pri skupinách recenzentov, burstiness a šírení podozrenia medzi prepojenými entitami. (RQ3) Kombinácia skupín sa najčastejšie robí early fusion alebo late fusion; osvedčené sú stromové ansámble a grafové neurónové siete, pričom ich výhoda sa musí overiť na časovo a doménovo oddelených dátach. (RQ4) Otvorené zostávajú nedostatok slovenských a českých dát, studený štart, posun distribúcie a adversariálne prispôsobovanie generovaných textov.
 
 
 {\small

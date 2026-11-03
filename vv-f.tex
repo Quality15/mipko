@@ -41,7 +41,7 @@
 \end{tabular}
 \vfill
 {\footnotesize
-Dokument je modelovým návrhom v rozsahu približne 50--60\,\% očakávanej finálnej verzie. Personálne a ekonomické údaje označené ako „doplniť“ treba pred finálnym podaním aktualizovať.
+Dokument je modelovým návrhom v rozsahu približne 50--60\,\% očakávanej finálnej verzie. Personálne a ekonomické údaje označené ako „(doplní sa)“ alebo „modelový údaj“ sa doplnia vo finálnej verzii.
 }
 \end{titlepage}
 
@@ -53,13 +53,13 @@ Online recenzie sú jedným z najvplyvnejších informačných kanálov v elektr
 
 Projekt reaguje na medzeru medzi akademickými detektormi a potrebami praxe. Existujúce riešenia sú prevažne anglocentrické, založené na povrchových jazykových príznakoch a v podmienkach generatívnych modelov strácajú spoľahlivosť. Prevádzkovatelia platforiem zároveň potrebujú nielen presný, ale aj vysvetliteľný nástroj, ktorý dokáže rozhodnutie o označení recenzie zdôvodniť a ktorý je možné prevádzkovať bez neprimeraného zásahu do súkromia používateľov.
 
-Projekt preto vyvinie hybridný detektor falošných recenzií, ktorý spája jazykové, behaviorálne a grafové príznaky, doplní ho o vrstvu vysvetlenia a overí v pilotnej prevádzke. Výstupom bude otvorený slovensko-anglický anotovaný dataset, metodika anotácie a hodnotenia, referenčný model, prototyp API a správa pre prax. Projekt začína na úrovni TRL~3 a končí na úrovni TRL~6: od overených laboratórnych postupov k funkčnému prototypu demonštrovanému v relevantnom prostredí.
+Projekt priamo nadväzuje na schválené zameranie, ktoré porovnáva jazykové a behaviorálne príznaky: tie tvoria jadro projektu a ich prínos sa bude merať samostatne aj v kombinácii. Grafové príznaky, vrstvu vysvetlenia a detekciu recenzií generovaných LLM berieme ako rozšírenia tohto jadra. Projekt preto vyvinie hybridný detektor falošných recenzií, ktorý spája jazykové, behaviorálne a grafové príznaky, doplní ho o vrstvu vysvetlenia a overí v pilotnej prevádzke. Výstupom bude otvorený slovensko-anglický anotovaný dataset, metodika anotácie a hodnotenia, referenčný model, prototyp API a správa pre prax. Ako pracovný návrh uvažujeme posun TRL~3→TRL~6: od overenia konceptu k prototypu demonštrovanému v relevantnom prostredí. Toto zaradenie je predbežné a tím ho musí potvrdiť podľa skutočnej východiskovej zrelosti riešenia a definícií TRL.
 
 \subsection{Aktuálnosť a originalita}
 
 Aktuálnosť témy je daná tromi súbežnými trendmi. Prvým je rast elektronického obchodu a závislosti spotrebiteľov od recenzií. Druhým je dostupnosť veľkých jazykových modelov, ktoré dokážu generovať plynulé a štylisticky presvedčivé recenzie v takmer neobmedzenom množstve \cite{zhao2025}. Tretím je regulácia: európsky rámec zakazuje zavádzajúce recenzie a posilňuje transparentnosť platforiem, čím vzniká dopyt po obhájiteľných nástrojoch moderovania.
 
-Originalita projektu spočíva v piatich prvkoch. (i)~Vytvoríme prvý otvorený slovensko-anglický benchmark pre detekciu falošných recenzií s viacnásobnou anotáciou. (ii)~Spojíme textové, behaviorálne a grafové príznaky v jednom modeli a systematicky porovnáme ich prínos. (iii)~Budeme explicitne modelovať recenzie generované LLM, nielen ľuďmi písaný spam. (iv)~Vysvetliteľnosť bude rovnocenným cieľom, nie dodatočnou funkciou. (v)~Výstupy budú otvorené a reprodukovateľné, aby ich mohli využiť ďalšie tímy aj prevádzkovatelia platforiem.
+Originalita projektu spočíva v piatich prvkoch. (i)~Vytvoríme otvorený slovensko-anglický benchmark pre detekciu falošných recenzií s viacnásobnou anotáciou; prvenstvo benchmarku budeme tvrdiť až po systematickom preskúmaní existujúcich zdrojov. (ii)~Spojíme textové, behaviorálne a grafové príznaky v jednom modeli a systematicky porovnáme ich prínos. (iii)~Budeme explicitne modelovať recenzie generované LLM, nielen ľuďmi písaný spam. (iv)~Vysvetliteľnosť bude rovnocenným cieľom, nie dodatočnou funkciou. (v)~Výstupy budú otvorené a reprodukovateľné, ak to umožnia licencie a podmienky zdrojových dát.
 
 Nejde teda o ďalší izolovaný klasifikátor, ale o metodiku a nástroj, ktorý prepája výskum s moderovaním v praxi. Práve kombinácia dát, hybridného modelovania a vysvetliteľnosti vytvára priestor na originálny príspevok v slovenskom aj medzinárodnom kontexte.
 
@@ -84,16 +84,18 @@ Ciele sú formulované merateľne a viažu sa na konkrétne výstupy a termíny.
 \toprule
 \# & Cieľ & Ukazovateľ & Termín \\
 \midrule
-O1 & Vytvoriť otvorený slovensko-anglický anotovaný dataset & minimálne 15\,000 recenzií; $\kappa \geq 0{,}7$ & M12 \\
+O1 & Vytvoriť otvorený slovensko-anglický anotovaný dataset & pracovný cieľ: 15\,000 recenzií; $\kappa \geq 0{,}7$ & M12 \\
 O2 & Vyvinúť jazykový model & F1 $\geq 0{,}80$ v rámci domény & M18 \\
 O3 & Vyvinúť behaviorálny a grafový model & F1 $\geq 0{,}75$; odhalenie skupín & M24 \\
 O4 & Skonštruovať hybridný model & F1 $\geq 0{,}85$ in-domain; $\geq 0{,}75$ cross-domain & M30 \\
-O5 & Overiť prototyp v praxi & pilot s 1--2 platformami; vysvetlenie top-$k$ príznakov & M36 \\
+O5 & Overiť prototyp v relevantnom prostredí & partnerský pilot, ak sa zabezpečí prístup; inak offline test; merať vysvetliteľnosť a latenciu & M36 \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-Ciele sú realistické vzhľadom na rozsah projektu, dostupné datasety a skúsenosti tímu. Zároveň sú dostatočne ambiciózne: vyžadujú nielen trénovanie modelov, ale aj tvorbu dát, anotáciu, evaluáciu a pilotné overenie. Splnenie cieľov budeme priebežne vyhodnocovať na míľnikoch M12, M24 a M36.
+Ciele sú pracovné plánovacie ciele tejto predbežnej verzie, nie výsledky už vykonaných experimentov ani čísla predpísané stránkou MIP/APVV. Cieľ 15\,000 je návrhový rozsah pre dvojjazyčný dataset (orientačne polovica na každý jazyk); jeho realizovateľnosť sa preverí po audite dostupných dát a anotačnej kapacity v M6. Hranica $\kappa \geq 0{,}7$ je orientačný cieľ zhody anotátorov; interpretácia kappa závisí od domény a rozdelenia tried, pričom Landis a Koch uvádzajú interval 0,61–0,80 ako „substantial agreement“ \cite{landis1977}. Ciele F1 (0,80 pre jazykový model, 0,75 pre behaviorálny/grafový a 0,85 pre hybridný model v rámci domény; 0,75 pri prenose) sú počiatočné akceptačné prahy zvolené tímom na porovnanie modelov, nie garancia výsledku; po vytvorení baseline v M6 ich tím prehodnotí a zdokumentuje. Všetky míľniky M6–M36 sa počítajú od navrhnutého začiatku 01/2027; dátumy a rozsah pilotu zostávajú závislé od prístupu k dátam a partnerom.
+
+Pri návrhovom cieli 15\,000 záznamov plánujeme ako pracovnú možnosť stratifikované rozdelenie 70\,/\,15\,/\,15 na tréning, validáciu a test (10\,500 / 2\,250 / 2\,250 záznamov); nejde o požiadavku webu ani o už získané dáta. Rozdelenie treba upraviť podľa dostupnosti a pomeru tried v oboch jazykoch. Prahy F1 sú predbežné ciele tímu, ktoré sa porovnajú s baseline na časovo a doménovo oddelených testovacích množinách; ak pilotné výsledky ukážu, že nie sú realistické, vo finálnej verzii sa zdôvodnene upravia.
 
 \subsection{Metodológia}
 
@@ -119,7 +121,7 @@ Etický rámec zahŕňa minimalizáciu osobných údajov, anonymizáciu, informo
 
 \subsection{Predchádzajúce výsledky a kompetencie}
 
-Zodpovedný riešiteľ \piName\ pôsobí na FIIT STU (Ústav informatiky a softvérového inžinierstva) a dlhodobo sa venuje softvérovému inžinierstvu, práci s dátami a vedeniu študentských projektových tímov (predmet Tímový projekt). Expertízu tímu v oblasti spracovania prirodzeného jazyka a strojového učenia zabezpečí spolupráca so špecialistami fakulty a mladými riešiteľmi. Uvedieme najviac 5 najvýznamnejších výstupov za posledných 5 rokov a najviac 3 projekty, ktoré zodpovedný riešiteľ viedol. Položky sú zoradené od najvýznamnejšej po menej významnú (podľa vyjadrenia Ing. Kapustíka); konkrétne údaje doplníme pred podaním podľa životopisu zodpovedného riešiteľa.
+Zodpovedný riešiteľ \piName\ pôsobí na FIIT STU (Ústav informatiky a softvérového inžinierstva) a dlhodobo sa venuje softvérovému inžinierstvu, práci s dátami a vedeniu študentských projektových tímov (predmet Tímový projekt). Expertízu tímu v oblasti spracovania prirodzeného jazyka a strojového učenia zabezpečí spolupráca so špecialistami fakulty a mladými riešiteľmi. Uvedieme najviac 5 najvýznamnejších výstupov za posledných 5 rokov a najviac 3 projekty, ktoré zodpovedný riešiteľ viedol; projekty môžu byť ľubovoľného typu, nielen grantové. Vyberáme podľa významnosti výstupu, pričom sa zoradia od najvýznamnejšej po menej významnú položku. V predbežnej verzii sú tabuľky zástupné; konkrétne údaje doplníme vo finálnej verzii podľa životopisu zodpovedného riešiteľa.
 
 Jeho víziou je budovať výskumný tím zameraný na dôveryhodnú analýzu textu a správania, systematicky rozvíjať expertízu v oblasti vysvetliteľného strojového učenia a vytvárať priestor pre kariérny rast mladých výskumníkov — od semestrálnych projektov cez diplomové práce až po doktorandské štúdium a vlastné grantové projekty.
 
@@ -130,13 +132,15 @@ Jeho víziou je budovať výskumný tím zameraný na dôveryhodnú analýzu tex
 \toprule
 \# & Najvýznamnejší výstup za posledných 5 rokov (max. 5, od najvýznamnejšieho) & Rok \\
 \midrule
-V1 & \emph{doplniť názov publikácie/výstupu a jeho význam} & doplniť \\
-V2 & \emph{doplniť názov publikácie/výstupu a jeho význam} & doplniť \\
-V3 & \emph{doplniť názov publikácie/výstupu a jeho význam} & doplniť \\
-V4 & \emph{doplniť názov publikácie/výstupu a jeho význam} & doplniť \\
-V5 & \emph{doplniť názov publikácie/výstupu a jeho význam} & doplniť \\
+V1 & --- & --- \\
+V2 & --- & --- \\
+V3 & --- & --- \\
+V4 & --- & --- \\
+V5 & --- & --- \\
 \bottomrule
 \end{tabularx}
+\smallskip
+\emph{Poznámka: zástupné riadky — konkrétne výstupy zodpovedného riešiteľa sa doplnia vo finálnej verzii.}
 \end{table}
 
 \begin{table}[h!]
@@ -146,18 +150,20 @@ V5 & \emph{doplniť názov publikácie/výstupu a jeho význam} & doplniť \\
 \toprule
 \# & Projekt (max. 3, najvýznamnejšie; názov, schéma, roky, rozpočet) & Rola (viedol) & Význam \\
 \midrule
-P1 & \emph{doplniť} & \emph{doplniť} & \emph{doplniť} \\
-P2 & \emph{doplniť} & \emph{doplniť} & \emph{doplniť} \\
-P3 & \emph{doplniť} & \emph{doplniť} & \emph{doplniť} \\
+P1 & --- & --- & --- \\
+P2 & --- & --- & --- \\
+P3 & --- & --- & --- \\
 \bottomrule
 \end{tabularx}
+\smallskip
+\emph{Poznámka: zástupné riadky — projekty vedené zodpovedným riešiteľom sa doplnia vo finálnej verzii.}
 \end{table}
 
 Organizácia disponuje laboratóriami, výpočtovou infraštruktúrou a prístupom k vedeckým databázam. Fakulta má skúsenosti s riešením grantových projektov, s vedením bakalárskych a diplomových prác a s publikovaním v oblasti informatiky. Pre projekt je dôležitá aj medzinárodná spolupráca a možnosť konzultovať výsledky s odborníkmi z praxe.
 
 \subsection{Zapojenie mladých pracovníkov}
 
-Na riešení sa podieľajú štyria študenti druhého stupňa, ktorí tvoria 80\,\% riešiteľského tímu. Matvii Nosenko sa zameria na NLP a modely strojového učenia, Volodymyr Nedoluha na zber a spracovanie dát, Danylo Nikolenko na backend a API a Rostyslav Mykytiuk na evaluáciu a vizualizáciu výsledkov. Expertízu jednotlivých riešiteľov tvoria kvalifikačné a semestrálne práce v oblasti spracovania prirodzeného jazyka, analýzy dát a softvérového inžinierstva; pred podaním ju doplníme o konkrétne výsledky a skúsenosti. Každý z nich bude mať možnosť publikovať ako spoluautor, zúčastniť sa konferencie a získať praktické skúsenosti s riešením aplikovaného projektu. Plán rozvoja zahŕňa pravidelné odborné semináre, revízie kódu a mentoring zo strany zodpovedného riešiteľa.
+Štyria študenti sú riešiteľmi prvého stupňa VŠ (Bc.); tvoria 80\,\% z piatich uvedených riešiteľov. Tento podiel vyjadruje zastúpenie študentov v tíme, nie potvrdené percento mladých pracovníkov; vekové zaradenie treba potvrdiť po doplnení dátumov narodenia. Matvii Nosenko sa zameria na NLP a modely strojového učenia, Volodymyr Nedoluha na zber a spracovanie dát, Danylo Nikolenko na backend a API a Rostyslav Mykytiuk na evaluáciu a vizualizáciu výsledkov. Konkrétnu odbornú expertízu jednotlivých študentov doplníme podľa ich životopisov/semestrálnych prác. Každý z nich bude mať možnosť publikovať ako spoluautor, zúčastniť sa konferencie a získať praktické skúsenosti s riešením aplikovaného projektu. Plán rozvoja zahŕňa pravidelné odborné semináre, revízie kódu a mentoring zo strany zodpovedného riešiteľa.
 
 \section{Dopad}
 
@@ -189,7 +195,7 @@ Meranie dopadu bude na troch úrovniach: vedeckej (publikácie, citácie, využi
 
 \subsection{Projektový plán, pracovné balíky a výstupy}
 
-Projekt je rozdelený na sedem pracovných balíkov, ktoré sa čiastočne prekrývajú. Každý balík má zodpovedného riešiteľa, výstupy a míľnik.
+Projekt je rozdelený na sedem pracovných balíkov, ktoré sa čiastočne prekrývajú. Každý balík má výstup a míľnik; zodpovednosti za balíky sa priradia podľa odbornej špecializácie členov tímu (bod 1.7) a pri štarte projektu sa spresnia.
 
 \begin{table}[h!]
 \centering
@@ -209,12 +215,11 @@ WP7 & Diseminácia a komunikácia & publikácie, web & 1--36 \\
 \end{tabularx}
 \end{table}
 
-Výstupy sú navrhnuté tak, aby na seba nadväzovali: dataset a guidelines sú predpokladom pre modely, modely pre hybridný prototyp a prototyp pre pilot. Každý výstup má jasného vlastníka a kontrolu kvality.
+Výstupy sú navrhnuté tak, aby na seba nadväzovali: dataset a guidelines sú predpokladom pre modely, modely pre hybridný prototyp a prototyp pre pilot. Každý výstup bude mať kontrolu kvality podľa postupu uvedeného v bode 3.3.
 
 \subsection{Harmonogram a míľniky}
 
-\begin{table}[h!]
-\centering
+\begin{center}
 \small
 \begin{tabularx}{\textwidth}{@{}p{1.2cm} X p{1.8cm}@{}}
 \toprule
@@ -228,7 +233,7 @@ M30 & Hybridný model a prototyp API & 06/2029 \\
 M36 & Pilotná správa, finálne vyhodnotenie a druhá publikácia & 12/2029 \\
 \bottomrule
 \end{tabularx}
-\end{table}
+\end{center}
 
 \subsection{Projektový manažment}
 
@@ -258,7 +263,7 @@ Závislosť na partnerovi & oneskorenie pilotu & viac partnerov, offline pilot, 
 
 \subsection{Rozpočet}
 
-Rozpočet vychádza z 36 mesiacov riešenia a je detailne rozpísaný vo formulári VV-C. Celkové náklady sú \budgetTotal\ EUR, z toho \budgetAPVV\ EUR z APVV a \budgetCoFin\ EUR zo spolufinancovania. Najväčšiu časť tvoria mzdové náklady a odvody, nasledujú služby, cestovné a nepriame náklady.
+Rozpočet je modelový výpočet pre študentský projekt v predmete MIP; nejde o skutočný grant ani o schválený rozpočet FIIT. Celkové náklady sú \budgetTotal\ EUR bez spolufinancovania. Mzdy sú počítané z predpokladaných hodín (PI 600 h/rok × 22 EUR/h hrubo; štyria študenti 4 × 100 h/rok × 10 EUR/h hrubo) a odvody sú 35\,\% miezd. Najväčšiu časť tvoria mzdy a odvody, nasledujú služby, cestovné a materiál.
 
 \begin{table}[h!]
 \centering
@@ -267,21 +272,21 @@ Rozpočet vychádza z 36 mesiacov riešenia a je detailne rozpísaný vo formul�
 \toprule
 Kategória & Spolu (EUR) \\
 \midrule
-Mzdové náklady a ostatné osobné náklady & 140\,000 \\
-Zdravotné a sociálne poistenie & 49\,000 \\
-Cestovné náklady & 15\,000 \\
-Materiál & 12\,000 \\
-Služby & 30\,000 \\
-Energie, vodné, stočné, komunikácie & 4\,000 \\
-Náklady na popularizáciu & 8\,000 \\
-Bežné nepriame náklady & 42\,000 \\
+Mzdové náklady a ostatné osobné náklady & 51\,600 \\
+Zdravotné a sociálne poistenie & 18\,060 \\
+Cestovné náklady & 3\,000 \\
+Materiál & 3\,000 \\
+Služby & 6\,000 \\
+Energie, vodné, stočné, komunikácie & 1\,500 \\
+Náklady na popularizáciu & 3\,000 \\
+Bežné nepriame náklady & 0 \\
 \midrule
-Celkové náklady & 300\,000 \\
+Celkové náklady & 86\,160 \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-Rozpočet je primeraný cieľom: najviac prostriedkov smeruje na ľudskú prácu (anotácia, modelovanie, evaluácia), ktorá je pre projekt kritická. Cestovné náklady pokrývajú konferencie a stretnutia s partnermi, služby zahŕňajú cloudový výpočet a právne poradenstvo. Pred finálnym podaním rozpočet preveríme podľa taríf organizácie a podmienok výzvy.
+Rozdelenie medzi roky je rovnomerné: 28\,720 EUR ročne. Položky na cestovné, materiál, služby a popularizáciu sú odhady bez potvrdených ponúk. Pred finálnou verziou treba overiť hodiny a sadzby.
 
 \subsection{Infraštruktúra}
 

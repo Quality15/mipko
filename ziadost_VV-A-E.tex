@@ -42,7 +42,7 @@
 \end{tabular}
 \vfill
 {\footnotesize
-Dokument je modelovým návrhom vypracovaným v rámci semestrálneho projektu v predmete Metódy inžinierskej práce. Ekonomické údaje a niektoré personálne údaje sú odhadom a pred finálnym podaním ich treba doplniť alebo potvrdiť.
+Dokument je modelovým návrhom vypracovaným v rámci semestrálneho projektu v predmete Metódy inžinierskej práce. Ekonomické údaje a niektoré personálne údaje sú modelové; zástupné hodnoty označené ako „(doplní sa)“ sa doplnia vo finálnej verzii.
 }
 \end{titlepage}
 
@@ -70,6 +70,9 @@ Dokument je modelovým návrhom vypracovaným v rámci semestrálneho projektu v
 13 Celkové náklady na projekt & \budgetTotal\ EUR \\
 \bottomrule
 \end{tabularx}
+
+\smallskip
+\emph{Poznámka k pôvodu údajov: slovenský názov a anotácia sú prevzaté zo schváleného zamerania. Anglický názov a akronym sú návrhy, keďže v odovzdanom zameraní chýbali. Termín 01/2027--12/2029, TRL a finančné sumy sú plánovacie predpoklady tímu pre 36-mesačný modelový projekt.}
 
 \newpage
 % ---------------------------------------------------------------
@@ -104,26 +107,26 @@ Bez spoluriešiteľskej organizácie. Projekt je riešený na jednej organizáci
 \setlength{\tabcolsep}{3.5pt}
 \begin{longtable}{@{}p{0.5cm} p{2.9cm} p{1.1cm} p{2.5cm} p{2.2cm} p{1.7cm} p{2.2cm} p{1.2cm}@{}}
 \toprule
-\# & Meno a priezvisko & Tituly & Pracovné zaradenie & Dátum narodenia & IČO organizácie & Počet hodín/rok & Mladý \\
+\# & Meno a priezvisko & Tituly & Pracovné zaradenie & Dátum narodenia & IČO organizácie & Počet hodín/rok & Vek $\leq$35? \\
 \midrule
 \endhead
-1 & Ivan Kapustík & Ing. & zodpovedný riešiteľ & doplniť & \applicantICO & 600 (doplniť) & nie \\
-2 & Matvii Nosenko & Bc. & študent -- riešiteľ & doplniť & \applicantICO & 100 & áno \\
-3 & Volodymyr Nedoluha & Bc. & študent -- riešiteľ & doplniť & \applicantICO & 100 & áno \\
-4 & Danylo Nikolenko & Bc. & študent -- riešiteľ & doplniť & \applicantICO & 100 & áno \\
-5 & Rostyslav Mykytiuk & Bc. & študent -- riešiteľ & doplniť & \applicantICO & 100 & áno \\
+1 & Ivan Kapustík & Ing. & zodpovedný riešiteľ & (doplní sa) & \applicantICO & 600 (modelový údaj) & overiť \\
+2 & Matvii Nosenko & Bc. & študent 1. stupňa -- riešiteľ & (doplní sa) & \applicantICO & 100 & overiť \\
+3 & Volodymyr Nedoluha & Bc. & študent 1. stupňa -- riešiteľ & (doplní sa) & \applicantICO & 100 & overiť \\
+4 & Danylo Nikolenko & Bc. & študent 1. stupňa -- riešiteľ & (doplní sa) & \applicantICO & 100 & overiť \\
+5 & Rostyslav Mykytiuk & Bc. & študent 1. stupňa -- riešiteľ & (doplní sa) & \applicantICO & 100 & overiť \\
 \bottomrule
 \end{longtable}
 }
 
 \vspace{0.5em}
-Poznámka: dátum narodenia je povinný a treba ho doplniť za každého riešiteľa. Členovia tímu sú študenti prvého stupňa VŠ (Bc.) s limitom 100 hodín ročne (podľa vyjadrenia Ing. Kapustíka). Stĺpec „Mladý“ je rozšírenie oproti úradnému vzoru — ukazuje podiel mladých pracovníkov do 35 rokov (80\,\% tímu).
+Poznámka: dátum narodenia je v žiadosti povinný; v predbežnej verzii je zástupný. Členovia tímu sú študenti prvého stupňa VŠ (Bc.); orientačný limit je 100 hodín ročne na študenta. Dátum narodenia je povinný a doplní sa; vekový status do 35 rokov sa určí podľa neho. Kapacita PI 600 hodín a podporná kapacita 300 hodín sú pracovné odhady. Štyria študenti tvoria 80\,\% z piatich uvedených riešiteľov. Hodiny v tejto tabuľke sú pracovné predpoklady pre predbežný plán, nie potvrdený pracovný výkaz ani mzdový výpočet.
 
 \subsection*{02 Ostatní zamestnanci}
-Modelovo predpokladáme administratívnu a technickú podporu organizácie v rozsahu približne 300 hodín ročne (doplniť podľa reálnej kapacity organizácie).
+Modelovo predpokladáme administratívnu a technickú podporu organizácie v rozsahu približne 300 hodín ročne (modelový údaj).
 
 \subsection*{03 Spolu}
-Celkový počet zamestnancov priamo sa podieľajúcich na riešení: 5. Súhrnná kapacita zamestnancov vrátane podpory: približne 1\,300 hodín ročne (zodpovedný riešiteľ 600 — doplniť, študenti 4 × 100, ostatní zamestnanci cca 300).
+Počet priamo uvedených riešiteľov: 5. Ich pracovná kapacita je v tomto modeli 1\,000 hodín ročne (PI 600 + 4 študenti × 100). Po pripočítaní modelovej podpornej kapacity 300 hodín je plánovací súčet približne 1\,300 hodín ročne.
 
 \newpage
 % ---------------------------------------------------------------
@@ -134,11 +137,11 @@ Celkový počet zamestnancov priamo sa podieľajúcich na riešení: 5. Súhrnn�
 \midrule
 01 Meno a priezvisko & \piName \\
 02 Pohlavie & muž \\
-03 Telefón & doplniť (ústredňa fakulty: \applicantPhone) \\
+03 Telefón & \applicantPhone\ (ústredňa FIIT STU; osobný kontakt sa doplní vo finálnej verzii) \\
 04 E-mail & \texttt{\piEmail} \\
 05 Zodpovedný riešiteľ je mladým vedeckým pracovníkom & nie \\
-06 ID výskumníka (vedecká databáza) & nevypĺňa sa (podľa vyjadrenia Ing. Kapustíka nie je povinné) \\
-07 Prehľad projektov zodpovedného riešiteľa za posledných 5 rokov & doplniť; uvádzajú sa projekty, ktoré viedol (názov, grantová schéma, roky realizácie, rozpočet, pozícia zodpovedného riešiteľa) \\
+06 ID výskumníka (vedecká databáza) & nevypĺňa sa (nie je povinné) \\
+07 Prehľad projektov zodpovedného riešiteľa za posledných 5 rokov & doplní sa; uvádzajú sa ľubovoľné projekty, najlepšie tie, ktoré riešiteľ viedol (štruktúra: názov, schéma, roky realizácie, rozpočet, pozícia) \\
 \bottomrule
 \end{tabularx}
 
@@ -160,9 +163,9 @@ Podpis zodpovedného riešiteľa: \dotfill\ Miesto: Bratislava, dátum: \project
 \midrule
 01 Kľúčové slová & falošné recenzie; recenzný spam; spracovanie prirodzeného jazyka; behaviorálna analýza; hybridný model; vysvetliteľnosť; slovenský jazyk \\
 02 Ciele projektu & viď zoznam nižšie \\
-03 Zaradenie projektu do TRL & TRL 3 na začiatku, TRL 6 na konci \\
-03 Zdôvodnenie zaradenia & Projekt začína overenými laboratórnymi postupmi a končí funkčným prototypom overeným v pilotnej prevádzke \\
-03 Zaradenie výstupov do TRL & dataset a metodika: TRL 4; model: TRL 5; prototyp API: TRL 6 \\
+03 Zaradenie projektu do TRL & pracovný návrh: TRL 3 na začiatku, TRL 6 na konci \\
+03 Zdôvodnenie zaradenia & Návrhový predpoklad: začiatok pri overovaní konceptu a koniec funkčným prototypom demonštrovaným v relevantnom prostredí; tím musí úroveň potvrdiť podľa definícií TRL \\
+03 Zaradenie výstupov do TRL & pracovný návrh: dataset a metodika TRL 4; model TRL 5; prototyp API TRL 6 \\
 04 Využitie výsledkov — odberateľ (realizátor) je žiadateľ & nasadenie detektora vo vlastných výskumných, vzdelávacích a konzultačných aktivitách FIIT STU \\
 04 Využitie výsledkov — iný odberateľ & prevádzkovatelia e-shopov a recenzných platforiem; orgány ochrany spotrebiteľa a regulátor \\
 05 Prehľad výstupov & viď tabuľku nižšie \\
@@ -171,11 +174,11 @@ Podpis zodpovedného riešiteľa: \dotfill\ Miesto: Bratislava, dátum: \project
 
 \subsection*{Ciele projektu}
 \begin{enumerate}[label=O\arabic*., leftmargin=*]
-  \item Vytvoriť otvorený slovensko-anglický anotovaný dataset s minimálne 15\,000 recenziami a mierou zhody anotátorov $\kappa \geq 0{,}7$.
+  \item Vytvoriť otvorený slovensko-anglický anotovaný dataset s pracovným cieľom 15\,000 recenzií a mierou zhody anotátorov $\kappa \geq 0{,}7$.
   \item Vyvinúť a vyhodnotiť jazykový model dosahujúci F1 najmenej 0{,}80 v rámci domény.
   \item Vyvinúť behaviorálny a grafový model dosahujúci F1 najmenej 0{,}75 a odhaľujúci koordinované skupiny.
   \item Skonštruovať hybridný model s F1 najmenej 0{,}85 v rámci domény a 0{,}75 pri prenose na novú doménu.
-  \item Dodať prototyp API s vysvetlením top-$k$ príznakov a overiť ho v pilotnej prevádzke s prevádzkovateľmi platforiem.
+  \item Dodať prototyp API s vysvetliteľnými výstupmi a vyhodnotiť ho v partnerskom pilote, ak sa zabezpečí prístup; inak vykonať offline test.
 \end{enumerate}
 
 \subsection*{Prehľad plánovaných výstupov}
@@ -193,6 +196,9 @@ V7 & Dve odborné publikácie a jedna správa pre prax & M36 \\
 \bottomrule
 \end{tabularx}
 
+\smallskip
+\emph{Ciele, prahy F1, cieľová veľkosť datasetu a TRL sú predbežné návrhové hodnoty tímu; nie sú predpísané webom predmetu. Ich dôvody a plán overenia sú opísané vo VV-F, časti 1.4.}
+
 \newpage
 % ---------------------------------------------------------------
 \formsection{VV-C — Rozpočet projektu v EUR}
@@ -205,57 +211,29 @@ V7 & Dve odborné publikácie a jedna správa pre prax & M36 \\
 \textbf{Kategória} & \textbf{2027} & \textbf{2028} & \textbf{2029} & \textbf{Spolu} \\
 \midrule
 01 Bežné priame náklady & & & & \\
-02 Mzdové náklady a ostatné osobné náklady & 45\,000 & 50\,000 & 45\,000 & 140\,000 \\
-03 Zdravotné a sociálne poistenie & 15\,750 & 17\,500 & 15\,750 & 49\,000 \\
-04 Cestovné náklady & 5\,000 & 5\,000 & 5\,000 & 15\,000 \\
-05 Materiál & 4\,000 & 4\,000 & 4\,000 & 12\,000 \\
-06 Služby & 10\,000 & 10\,000 & 10\,000 & 30\,000 \\
-07 Energie, vodné, stočné, komunikácie & 1\,500 & 1\,500 & 1\,000 & 4\,000 \\
-08 Náklady na popularizáciu & 2\,000 & 3\,000 & 3\,000 & 8\,000 \\
-09 Bežné nepriame náklady & 11\,750 & 19\,000 & 11\,250 & 42\,000 \\
+02 Mzdové náklady a ostatné osobné náklady & 17\,200 & 17\,200 & 17\,200 & 51\,600 \\
+03 Zdravotné a sociálne poistenie & 6\,020 & 6\,020 & 6\,020 & 18\,060 \\
+04 Cestovné náklady & 1\,000 & 1\,000 & 1\,000 & 3\,000 \\
+05 Materiál & 1\,000 & 1\,000 & 1\,000 & 3\,000 \\
+06 Služby & 2\,000 & 2\,000 & 2\,000 & 6\,000 \\
+07 Energie, vodné, stočné, komunikácie & 500 & 500 & 500 & 1\,500 \\
+08 Náklady na popularizáciu & 1\,000 & 1\,000 & 1\,000 & 3\,000 \\
+09 Bežné nepriame náklady & 0 & 0 & 0 & 0 \\
 \midrule
-10 Bežné náklady spolu & 95\,000 & 110\,000 & 95\,000 & 300\,000 \\
+10 Bežné náklady spolu & 28\,720 & 28\,720 & 28\,720 & 86\,160 \\
 \midrule
-Celkové náklady z APVV & 85\,000 & 98\,000 & 85\,000 & 268\,000 \\
-Spolufinancovanie & 10\,000 & 12\,000 & 10\,000 & 32\,000 \\
+Celkové náklady z APVV & 28\,720 & 28\,720 & 28\,720 & 86\,160 \\
+Spolufinancovanie & 0 & 0 & 0 & 0 \\
 \midrule
-Celkové náklady & 95\,000 & 110\,000 & 95\,000 & 300\,000 \\
+Celkové náklady & 28\,720 & 28\,720 & 28\,720 & 86\,160 \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-\subsection*{Spolufinancovanie — rozdelenie podľa zdroja}
-\begin{tabularx}{\textwidth}{@{}X r r r r@{}}
-\toprule
-\textbf{Zdroj} & \textbf{2027} & \textbf{2028} & \textbf{2029} & \textbf{Spolu} \\
-\midrule
-Štátne (mimo zdrojov APVV) & 10\,000 & 12\,000 & 10\,000 & 32\,000 \\
-Zahraničné & 0 & 0 & 0 & 0 \\
-Súkromné & 0 & 0 & 0 & 0 \\
-\midrule
-Spolufinancovanie spolu & 10\,000 & 12\,000 & 10\,000 & 32\,000 \\
-\bottomrule
-\end{tabularx}
+\subsection*{Predpoklady modelu}
+Mzdy sú vypočítané z predpokladaných hodín: PI 600 h/rok × 22 EUR/h hrubo a štyria študenti 4 × 100 h/rok × 10 EUR/h hrubo, spolu 17\,200 EUR ročne. Odvody sú 35 % miezd. Ostatné položky sú odhady bez potvrdených ponúk. Projekt je študentský, preto sa neplánuje spolufinancovanie.
 
-\subsection*{Rozpis predpokladaných nákladov uplatňovaných z APVV (žiadateľ)}
-\begin{tabularx}{\textwidth}{@{}X r r r r@{}}
-\toprule
-\textbf{Kategória} & \textbf{2027} & \textbf{2028} & \textbf{2029} & \textbf{Spolu} \\
-\midrule
-02 Mzdové náklady a ostatné osobné náklady & 42\,000 & 46\,000 & 42\,000 & 130\,000 \\
-03 Zdravotné a sociálne poistenie & 14\,700 & 16\,100 & 14\,700 & 45\,500 \\
-04 Cestovné náklady & 4\,000 & 4\,000 & 4\,000 & 12\,000 \\
-05 Materiál & 3\,500 & 3\,500 & 3\,500 & 10\,500 \\
-06 Služby & 8\,000 & 10\,000 & 8\,000 & 26\,000 \\
-07 Energie, vodné, stočné, komunikácie & 1\,200 & 1\,300 & 1\,200 & 3\,700 \\
-08 Náklady na popularizáciu & 2\,000 & 2\,600 & 2\,000 & 6\,600 \\
-09 Bežné nepriame náklady & 9\,600 & 14\,500 & 9\,600 & 33\,700 \\
-\midrule
-Spolu z APVV & 85\,000 & 98\,000 & 85\,000 & 268\,000 \\
-\bottomrule
-\end{tabularx}
-
-Poznámka: rozpočet je modelový a vychádza z odhadu pracnosti 36 mesiacov. Rozpis pokrýva náklady financované z APVV; rozdiel medzi celkovými nákladmi a rozpisom uhradí spolufinancovanie. Pred finálnym podaním ho treba prepracovať podľa reálnych taríf organizácie a podmienok výzvy.
+Ide o modelový rozpočet študentského projektu v predmete MIP, nie o rozpočet reálneho grantu ani o schválený rozpočet FIIT. Rozdelenie medzi roky je rovnomerné: 28\,720 EUR ročne, spolu 86\,160 EUR (3 × 28\,720 = 86\,160). Odvody sú modelované ako 35\,\% mzdových nákladov (6\,020 EUR ročne); pred finálnou verziou treba overiť hodiny a sadzby.
 
 \newpage
 % ---------------------------------------------------------------
