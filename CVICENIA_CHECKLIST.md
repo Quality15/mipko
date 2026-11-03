@@ -88,15 +88,24 @@
 
 ## Cvičenie 6 — презентация в LaTeX (beamer) + продвинутая Jira
 
-- [ ] **6.1** В Jira закрыть спринт `sprint_1_tyzden_5` (**Complete Sprint**); незавершённые задачи перенести в `sprint_2_tyzden_6`.
-- [ ] **6.2** В новый спринт перенести из backlog задачи по рабочей версии проекта (не входившие в прошлый спринт) и особенно по презентации; проставить Story points и ответственных, запустить спринт.
-- [ ] **6.3** Доустановить в Jira поддержку интеграции с GitHub (гайд: https://youtu.be/e5yr7nIqTc8).
-- [ ] **6.4** Для каждой задачи спринта 8 создать в Jira связь (GitHub toolkit) с коммитами в отдельной ветке.
+Repo-часть готова (LaTeX, beamer) в папке `cv6/`; шаги в Jira — ручные, план в `cv6/JIRA_PLAN_CV6.md`.
+
+- [~] **6.1** В Jira закрыть спринт `sprint_1_tyzden_5` (**Complete Sprint**); незавершённые задачи перенести в `sprint_2_tyzden_6`. — **[РУЧНО]**, пошагово в `cv6/JIRA_PLAN_CV6.md` (6.1).
+- [~] **6.2** В новый спринт перенести из backlog задачи по рабочей версии проекта (не входившие в прошлый спринт) и особенно по презентации; проставить Story points и ответственных, запустить спринт. — **[РУЧНО]**, состав спринта (P1–P7 + R1–R8) в `cv6/JIRA_PLAN_CV6.md` (6.2).
+- [~] **6.3** Доустановить в Jira поддержку интеграции с GitHub (гайд: https://youtu.be/e5yr7nIqTc8). — **[РУЧНО]**, шаги в `cv6/JIRA_PLAN_CV6.md` (6.3).
+- [~] **6.4** Для каждой задачи спринта 8 создать в Jira связь (GitHub toolkit) с коммитами в отдельной ветке. — ветка `prez-cv6` и формат коммитов готовы (`cv6/JIRA_PLAN_CV6.md`, 6.4); сама привязка в Jira — **[РУЧНО]**.
 
 ### Задачи в LaTeX (beamer)
-- [ ] **6.5** Скачать `prez.tex` по ссылке с c06.html и собрать в PDF, сравнить с образцом `prez.pdf` (сборка может требовать запуска дважды).
-- [ ] **6.6** Изменить пример под начальную версию презентации статьи: задать название, автора, дату; добавить несколько секций; слайды с пунктами 1-го и 2-го уровня; слайд с рисунком.
-- [ ] **6.7** Собрать в PDF; поэкспериментировать с темой и цветами через `\usetheme` и `\usecolortheme`.
+- [x] **6.5** Скачать `prez.tex` по ссылке с c06.html и собрать в PDF, сравнить с образцом `prez.pdf` (сборка может требовать запуска дважды). — `cv6/prez-original.tex` → `cv6/prez-original.pdf` (9 стр.) совпадает с `cv6/prez-vzor.pdf`; нюанс с `.toc` описан в `cv6/poznamky.md`.
+- [x] **6.6** Изменить пример под начальную версию презентации статьи: задать название, автора, дату; добавить несколько секций; слайды с пунктами 1-го и 2-го уровня; слайд с рисунком. — `cv6/prez.tex` + `cv6/prez.pdf` (15 слайдов, тема Warsaw/seahorse).
+- [x] **6.7** Собрать в PDF; поэкспериментировать с темой и цветами через `\usetheme` и `\usecolortheme`. — `cv6/prez-themes.tex` + `cv6/build-themes.sh` → 7 вариантов в `cv6/themes/`.
+
+### Артефакты Cvičenia 6 (папка `cv6/`)
+- `prez-original.tex`, `prez-original.pdf`, `prez-vzor.pdf` — úloha 6.5 (vzor a jeho preklad).
+- `prez.tex`, `prez.pdf` — úloha 6.6 (naša inicálna prezentácia, beamer).
+- `prez-themes.tex`, `build-themes.sh`, `themes/*.pdf` — úloha 6.7 (témy a farebnosti).
+- `poznamky.md` — detaily k 6.5–6.7 a porovnaniu so vzorom.
+- `JIRA_PLAN_CV6.md` — пошаговый план 6.1–6.4 (Jira, GitHub integrácia, ветка, коммиты).
 
 ## Cvičenie 7–11 — презентация и дискуссии
 
@@ -126,6 +135,6 @@
 
 1. Cvičenie 5.1–5.10: поднять Jira-сайт и завести задачи Cvičenia 4–5.
 2. Cvičenie 5.13–5.18: backlog, `sprint_1_tyzden_5`, story points, коммиты с issue keys, `git_log.txt`.
-3. Cvičenie 6: закрыть спринт, `sprint_2_tyzden_6`, GitHub-интеграция, `prez.tex`.
+3. Cvičenie 6: закрыть спринт, `sprint_2_tyzden_6`, GitHub-интеграция, `prez.tex`. — LaTeX-часть (6.5–6.7) готова в `cv6/`; в Jira осталось ручное (6.1–6.4, план в `cv6/JIRA_PLAN_CV6.md`).
 4. Cvičenie 4 хвосты: остался только ручной upload `cv4/overleaf-upload.zip` в Overleaf (4.5/4.6); 4.7 и 4.9 закрыты.
 5. Cvičenie 7.1–7.4: слайды и выступление до 29.11.
