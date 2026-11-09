@@ -1,0 +1,9 @@
+Kritérium (skóre 1–5),Váha,Jazykový,Behaviorálny,Grafový,Hybridný
+Presnosť v rámci domény,0.25,3,3,4,5
+Odolnosť voči LLM-generovaným textom,0.2,1,4,3,4
+Zachytenie koordinovaných kampaní,0.15,1,4,5,5
+Interpretovateľnosť výstupu,0.2,5,3,2,4
+Dostupnosť dát pri štarte,0.1,5,2,1,3
+Škálovateľnosť a náklady,0.1,4,3,2,3
+Vážené skóre (=SUMPRODUCT),1.00,3.00,3.25,3.05,4.20
+Odporúčanie (=IF>=3.5),prah 3.50,Doplnkový,Doplnkový,Doplnkový,Odporúčaný

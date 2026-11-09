@@ -1,0 +1,8 @@
+WP,Názov,Zodpovedný,Obdobie,Od_M,Do_M,Trvanie_mes,Kapacita_h
+WP1,"Manažment, koordinácia, reporting a riadenie rizík",Matvii Nosenko,M1–M36,1,36,36,120
+WP2,"Zber, anotácia a sprístupnenie dát (SK/EN dataset)",Volodymyr Nedoluha,M1–M12,1,12,12,240
+WP3,Jazykové modely a baseline experimenty,Matvii Nosenko,M7–M18,7,18,12,180
+WP4,Behaviorálne a grafové modely,Volodymyr Nedoluha,M13–M24,13,24,12,180
+WP5,"Hybridný model, fúzia a vrstva vysvetliteľnosti",Danylo Nikolenko,M19–M30,19,30,12,200
+WP6,"Pilotné overenie, prototyp API a evaluácia",Rostyslav Mykytiuk,M25–M36,25,36,12,160
+WP7,"Diseminácia, dokumentácia a publikácie",Rostyslav Mykytiuk,M1–M36,1,36,36,120

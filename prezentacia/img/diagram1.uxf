@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='utf-8'?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>50</x>
+      <y>10</y>
+      <w>150</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Zber recenzií</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>120</x>
+      <y>50</y>
+      <w>30</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes />
+    <additional_attributes>lt=&amp;lt;..</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>40</x>
+      <y>90</y>
+      <w>170</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>Predspracovanie
+textu</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>70</x>
+      <y>140</y>
+      <w>30</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes />
+    <additional_attributes>lt=&amp;lt;..</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>170</x>
+      <y>140</y>
+      <w>30</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes />
+    <additional_attributes>lt=&amp;lt;..</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>10</x>
+      <y>190</y>
+      <w>110</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>Jazykové
+príznaky</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>130</x>
+      <y>190</y>
+      <w>110</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>Behaviorálne
+príznaky</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>60</x>
+      <y>240</y>
+      <w>30</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes />
+    <additional_attributes>lt=&amp;lt;..</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>240</y>
+      <w>30</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes />
+    <additional_attributes>lt=&amp;lt;..</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>50</x>
+      <y>290</y>
+      <w>150</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>Klasifikácia</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>120</x>
+      <y>340</y>
+      <w>30</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes />
+    <additional_attributes>lt=&amp;lt;..</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>50</x>
+      <y>380</y>
+      <w>150</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>Falošná?</panel_attributes>
+    <additional_attributes>type=decision</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>70</x>
+      <y>430</y>
+      <w>30</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>«áno»</panel_attributes>
+    <additional_attributes>lt=&amp;lt;..</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>170</x>
+      <y>430</y>
+      <w>30</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>«nie»</panel_attributes>
+    <additional_attributes>lt=&amp;lt;..</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>10</x>
+      <y>470</y>
+      <w>110</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Označiť
+recenziu</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>130</x>
+      <y>470</y>
+      <w>110</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Ponechať
+recenziu</panel_attributes>
+    <additional_attributes />
+  </element>
+</diagram>

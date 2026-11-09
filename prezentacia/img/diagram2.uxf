@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='utf-8'?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>20</y>
+      <w>210</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Recenzia
+--
+- id: String
+- text: String
+- hodnotenie: int
+- datum: DateTime</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>120</x>
+      <y>100</y>
+      <w>30</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes />
+    <additional_attributes>lt=&amp;lt;&amp;lt;-</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>160</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;
+ExtraktorPriznakov
+--
++ extrahuj(r: Recenzia): Vektor</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>60</x>
+      <y>230</y>
+      <w>30</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes />
+    <additional_attributes>lt=&amp;lt;&amp;lt;.</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>170</x>
+      <y>230</y>
+      <w>30</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes />
+    <additional_attributes>lt=&amp;lt;&amp;lt;.</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>290</y>
+      <w>110</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>JazykovyModul
+--
+- sentiment: float
+- nGramy: List
+--
++ analyzuj(): Vektor</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>130</x>
+      <y>290</y>
+      <w>110</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>BehavioralnyModul
+--
+- frekvencia: int
+- odchylka: float
+--
++ analyzuj(): Vektor</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>60</x>
+      <y>370</y>
+      <w>30</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes />
+    <additional_attributes>lt=&amp;lt;&amp;lt;-</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>170</x>
+      <y>370</y>
+      <w>30</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes />
+    <additional_attributes>lt=&amp;lt;&amp;lt;-</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>430</y>
+      <w>210</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Klasifikator
+--
++ predikuj(v: Vektor): boolean
++ vyhodnotModel(): float</panel_attributes>
+    <additional_attributes />
+  </element>
+</diagram>
